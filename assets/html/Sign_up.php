@@ -1,6 +1,18 @@
 <html>
     <body>
+        <div class = "Signup-container">
         <h3>Create Account</h3>
-        <button></button>
+        <div class = "choice-button">
+            <button>Student</button>
+            <button>Lecturer</button>
+        </div>
+        <form action="post">
+        <label>FullName</label>
+        <input type = "text" placeholder = "Abebe Bekele" name = "Fullname"/>
+        <label>Email</label>
+        <input type = "Email" placeholder = "AbebeBekele@gmail.com" name = "email"/>
+        <label></label>
+        </form>
+        </div>
     </body>
 </html>
