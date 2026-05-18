@@ -6,6 +6,7 @@
             <button>Student</button>
             <button>Lecturer</button>
         </div>
+        <div id = "Student">
         <form action="post">
         <label>FullName</label>
         <input type = "text" placeholder = "Abebe Bekele" name = "Fullname"/>
@@ -13,6 +14,7 @@
         <input type = "Email" placeholder = "AbebeBekele@gmail.com" name = "email"/>
         <label></label>
         </form>
+        </div>
         </div>
     </body>
 </html>
