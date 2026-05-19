@@ -25,10 +25,12 @@
         <input type = "text" placeholder = "2016" name = "year" inputmode="numeric" maxlength="4" required>
         <label>Semester</label>
         <select name = "Semester" required>
-        <option value = "1st">1st</option>
-        <option value = "2nd">2nd</option>
-        <option value = "3rd">3rd</option>
+        <option value = "1">1</option>
+        <option value = "2">2</option>
+        <option value = "3">3</option>
         </select>
+        <label>Student ID</label>
+        <input type = "text" placeholder = "RCD2020" name = "Student_Id">
         <label>Password</label>
         <input type = "password" placeholder = "user123" name = "password" required>
         <button name = "Register">Sign Up</button>
