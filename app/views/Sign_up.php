@@ -1,3 +1,4 @@
+
 <html>
     <body>
         <div class = "Signup-container">
@@ -7,7 +8,7 @@
             <button>Lecturer</button>
         </div>
         <div id = "Student">
-        <form action="post">
+        <form action = "../controllers/authenticationcontroller.php" method="post">
         <label>Full Name</label>
         <input type = "text" placeholder = "Abebe Bekele" name = "Fullname"/>
         <label>Email</label>
@@ -28,6 +29,7 @@
         <option value = "2nd">2nd</option>
         <option value = "3rd">3rd</option>
         </select>
+        <button name = "Register">Sign Up</button>
         </form>
         </div>
         </div>
