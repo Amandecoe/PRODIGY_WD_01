@@ -8,11 +8,17 @@
         </div>
         <div id = "Student">
         <form action="post">
-        <label>FullName</label>
+        <label>Full Name</label>
         <input type = "text" placeholder = "Abebe Bekele" name = "Fullname"/>
         <label>Email</label>
         <input type = "Email" placeholder = "AbebeBekele@gmail.com" name = "email"/>
-        <label type = "t"></label>
+        <label>Year</label>
+        <input type = "text" placeholder = "2016" name = "year" inputmode="numeric" maxlength="4"/>
+        <label>Department</label>
+        <select name="Department" required>
+        <option value = "" >Select Department</option>
+        <option value = "">Computer Science</option>
+        </select>
         </form>
         </div>
         </div>
