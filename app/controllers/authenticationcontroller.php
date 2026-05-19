@@ -1,9 +1,12 @@
 <?php
 session_start();
 
-include "../config/db.php";
 
 
+class User{
+
+    public function Register(){
+        include "../config/db.php";
         if (isset($_POST['Register'])) {
             $FullName = $_POST['Fullname'];
             $Email = $_POST['email'];
@@ -21,4 +24,6 @@ include "../config/db.php";
             echo mysqli_error($con);
             }
         }
+    }
+}
 ?>
