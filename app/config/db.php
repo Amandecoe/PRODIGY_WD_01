@@ -10,5 +10,4 @@ if(mysqli_connect_errno()){
     echo "Can not connect to Database!!";
     exit();
 }
-echo "Connection Success";
 ?>
