@@ -24,7 +24,9 @@
         <input type = "text" placeholder = "2016" name = "year" inputmode="numeric" maxlength="4"/>
         <label>Semester</label>
         <select name = "Semester" required>
-        
+        <option value = "1st">1st</option>
+        <option value = "2nd">2nd</option>
+        <option value = "3rd">3rd</option>
         </select>
         </form>
         </div>
