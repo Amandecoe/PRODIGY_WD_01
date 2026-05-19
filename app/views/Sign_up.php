@@ -10,9 +10,9 @@
         <div id = "Student">
         <form action = "../controllers/authenticationcontroller.php" method="post">
         <label>Full Name</label>
-        <input type = "text" placeholder = "Abebe Bekele" name = "Fullname"/>
+        <input type = "text" placeholder = "Abebe Bekele" name = "Fullname" required/>
         <label>Email</label>
-        <input type = "Email" placeholder = "AbebeBekele@gmail.com" name = "email"/>
+        <input type = "Email" placeholder = "AbebeBekele@gmail.com" name = "email" />
         <label>Department</label>
         <select name="Department" required>
         <option value = "" >None</option>
@@ -22,13 +22,15 @@
         <option value = "Economics">Economics</option>
         </select>
         <label>Year</label>
-        <input type = "text" placeholder = "2016" name = "year" inputmode="numeric" maxlength="4"/>
+        <input type = "text" placeholder = "2016" name = "year" inputmode="numeric" maxlength="4" required/>
         <label>Semester</label>
         <select name = "Semester" required>
         <option value = "1st">1st</option>
         <option value = "2nd">2nd</option>
         <option value = "3rd">3rd</option>
         </select>
+        <label>Password</label>
+        <input type = "password" placeholder = "user123" name = "password" required/>
         <button name = "Register">Sign Up</button>
         </form>
         </div>
