@@ -1,8 +1,6 @@
 <?php
 session_start();
 
-
-
 class User{
 
     public function Register(){
