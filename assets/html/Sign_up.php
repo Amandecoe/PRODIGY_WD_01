@@ -12,7 +12,7 @@
         <input type = "text" placeholder = "Abebe Bekele" name = "Fullname"/>
         <label>Email</label>
         <input type = "Email" placeholder = "AbebeBekele@gmail.com" name = "email"/>
-        <label></label>
+        <label type = "t"></label>
         </form>
         </div>
         </div>
