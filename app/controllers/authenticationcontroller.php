@@ -1,9 +1,11 @@
 <?php
 session_start();
-
+include "../config/db.php";
+$user = new User($con);
+$user->Register($con);
 class User{
 
-    public function Register(){
+    public function Register($con){
         include "../config/db.php";
         if (isset($_POST['Register'])) {
             $FullName = $_POST['Fullname'];
@@ -18,6 +20,7 @@ class User{
             VALUES('$FullName', '$Email', '$Department','$Year','$Semester','$password','$StudentID')";
 
             if(mysqli_query($con, $sql)){
+                echo "Success";
             }else{
             echo mysqli_error($con);
             }
