@@ -20,7 +20,7 @@ class User{
             VALUES('$FullName', '$Email', '$Department','$Year','$Semester','$password','$StudentID')";
 
             if(mysqli_query($con, $sql)){
-                echo "Success";
+                header("Location: ../views/Dashboard.php");
             }else{
             echo mysqli_error($con);
             }
