@@ -1,7 +1,7 @@
 
 <html>
     <body>
-        <div class = "Signup-container">
+        <div class = "form-container">
         <h3>Create Account</h3>
         <div class = "choice-button">
             <button>Student</button>
