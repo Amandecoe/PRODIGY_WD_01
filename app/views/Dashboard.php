@@ -3,6 +3,7 @@ include "./includes/base.html";
 ?>
 <html>
     <body>
-        <h1>Welcome <?php echo $user['Name']?></h1>
+        <h1>Dashboard</h1>
+        <p>Welcome <?php echo $user['Name']?></p>
     </body>
 </html>
