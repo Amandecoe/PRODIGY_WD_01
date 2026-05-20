@@ -10,7 +10,7 @@ include "./includes/base.html";
         <h3>Total Projects</h3>
         </div>
         <div id = "top-cards">
-
+        <h3>Average Grade</h3>
         </div>
         </div>
         <div id = "Projects">
