@@ -28,6 +28,9 @@ class User{
     }
     public function Login($con){
         include "../config/db.php";
+        if(isset($_POST["Login"])){
+            include "../config/db.php";
+        }
     }
 }
 ?>
