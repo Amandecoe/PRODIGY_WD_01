@@ -1,6 +1,3 @@
-<?php
-include "./includes/base.html";
-?>
 <html>
     <body>
         <h1>Dashboard</h1>
@@ -14,7 +11,8 @@ include "./includes/base.html";
         </div>
         </div>
         <div id = "Projects">
-
         </div>
+        <a href="./submit_project.php"><button >Upload Project</button></a>
     </body>
+
 </html>

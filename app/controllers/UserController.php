@@ -2,7 +2,8 @@
 //controller to get logged in user's information
 include "../config/db.php";
 include "../models/User.php";
-
+error_reporting(E_ALL);
+ini_set('display_errors',1);
 class UserController{
     private $userModel;
     public function __construct($con){
