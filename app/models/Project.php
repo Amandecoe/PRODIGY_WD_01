@@ -1,6 +1,5 @@
 <?php
 include "../config/db.php";
-include "../controllers/Projectcontroller.php";
 
 class Project{
     private $con;

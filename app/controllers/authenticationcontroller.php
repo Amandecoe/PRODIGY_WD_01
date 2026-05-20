@@ -1,8 +1,7 @@
 <?php
 session_start();
 include "../config/db.php";
-error_reporting(E_ALL);
-ini_set('display_errors', 1);
+
 class Users{
     private $con;
     public function __construct($con){

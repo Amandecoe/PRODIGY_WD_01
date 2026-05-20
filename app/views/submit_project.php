@@ -7,7 +7,7 @@
         <input type = "text" name="project-description" required>
         <label>File</label>
         <input type = "file" name="project-file">
-        <button name = "Upload">Upload</button>
+        <button type="submit" name = "upload">Upload</button>
         </form>
     </body>
 </html>
