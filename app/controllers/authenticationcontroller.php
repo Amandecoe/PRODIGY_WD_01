@@ -3,6 +3,7 @@ session_start();
 include "../config/db.php";
 $user = new User($con);
 $user->Register($con);
+$user ->Login($con);
 class User{
 
     public function Register($con){
@@ -29,7 +30,20 @@ class User{
     public function Login($con){
         include "../config/db.php";
         if(isset($_POST["Login"])){
-            
+            $Email = $_POST['email'];
+            $password = $_POST['password'];
+
+            $sql = "SELECT * FROM STUDENT WHERE Email = '$Email'
+            AND password = '$password'";
+            $result = mysqli_query($con, $sql);
+
+            if(mysqli_num_rows($result)>0){
+                header("Location: ../views/Dashboard.php");
+                exit();
+            }
+            else{
+                echo "Wrong Email or Password, Try Again";
+            }
         }
     }
 }
