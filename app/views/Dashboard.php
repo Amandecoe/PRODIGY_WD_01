@@ -7,7 +7,7 @@ include "./includes/base.html";
         <p>Welcome <?php echo $user['Name']?></p>
         <div id = "top-section">
         <div id = "top-cards">
-
+        <h3>Total Projects</h3>
         </div>
         <div id = "top-cards">
 
