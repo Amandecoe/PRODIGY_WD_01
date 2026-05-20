@@ -7,7 +7,6 @@ class Users{
         $this->con = $con;
     }
     public function Register(){
-        include "../config/db.php";
         if (isset($_POST['Register'])) {
             $FullName = $_POST['Fullname'];
             $Email = $_POST['email'];
