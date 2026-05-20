@@ -27,7 +27,7 @@ class User{
         }
     }
     public function Login($con){
-        
+        include "../config/db.php";
     }
 }
 ?>
