@@ -26,5 +26,8 @@ class User{
             }
         }
     }
+    public function Login($con){
+        
+    }
 }
 ?>
