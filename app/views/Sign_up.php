@@ -57,7 +57,7 @@
             <label>Password</label>
             <input type = "password" placeholder="abebe123" name="password">
             <input type="hidden" name="role" value="lecturer">
-            <button name="Sign-up"> Sign Up</button>
+            <button name="Register"> Sign Up</button>
         </form>
         </div>
 
