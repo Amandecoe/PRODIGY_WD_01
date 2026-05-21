@@ -19,5 +19,5 @@ class UserController{
 }
 $usercontroller = new UserController($con);
 $user = $usercontroller->getLoggedinUser();
-include "../views/Dashboard.php";
+include "../views/StudentDashboard.php";
 ?>
