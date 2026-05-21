@@ -3,7 +3,7 @@ let lecturer = document.getElementById("Lecturer");
 let studentchoicebutton = document.getElementById("Student-choice");
 let lecturerchoicebutton = document.getElementById("Lecturer-choice");
 
-student.style.display = "block";
+student.style.display = "block"; //default when the pages load
 lecturer.style.display = "none";
 
 function choice(){
