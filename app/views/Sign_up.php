@@ -36,6 +36,13 @@
         <button name = "Register">Sign Up</button>
         </form>
         </div>
+
+        <div id = "Lecturer">
+        <form>
+            
+        </form>
+        </div>
+
         </div>
     </body>
 </html>
