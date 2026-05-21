@@ -7,7 +7,7 @@ class Users{
     public function __construct($con){
         $this->con = $con;
     }
-    public function Register(){
+    public function RegisterStudent(){
         if (isset($_POST['Register'])) {
             $FullName = $_POST['Fullname'];
             $Email = $_POST['email'];
@@ -27,7 +27,7 @@ class Users{
             }
         }
     }
-    public function Login(){
+    public function LoginStudent(){
         if(isset($_POST["Login"])){
             $Email = $_POST['email'];
             $password = $_POST['password'];
