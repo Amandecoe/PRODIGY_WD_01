@@ -13,7 +13,13 @@
                 <input type = "email" name = "email" placeholder = "AbebeBekele@gmail.com" required>
                 <label>Password</label>
                 <input type="password" name = "password" placeholder = "user123" required>
+                <input type="hidden" name="role" value="student">
                 <button name = "Login"> Sign Up</button>
+            </form>
+        </div>
+        <div id = "Lecturer">
+            <form action = "./controllers/authenticationcontroller.php" method = "post">
+                <input type="hidden" name="role" value="lecturer">
             </form>
         </div>
         </div>

@@ -8,7 +8,7 @@ class Users{
         $this->con = $con;
     }
     public function RegisterStudent(){
-        if (isset($_POST['Register'])) {
+        if ($_POST['role'] == 'student') {
             $FullName = $_POST['Fullname'];
             $Email = $_POST['email'];
             $Department = $_POST['Department'];
@@ -28,7 +28,7 @@ class Users{
         }
     }
     public function LoginStudent(){
-        if(isset($_POST["Login"])){
+        if($_POST['role'] == 'student'){
             $Email = $_POST['email'];
             $password = $_POST['password'];
 

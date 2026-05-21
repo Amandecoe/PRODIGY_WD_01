@@ -33,13 +33,31 @@
         <input type = "text" placeholder = "RCD2020" name = "Student_Id">
         <label>Password</label>
         <input type = "password" placeholder = "user123" name = "password" required>
+        <input type="hidden" name="role" value="student">
         <button name = "Register">Sign Up</button>
         </form>
         </div>
 
         <div id = "Lecturer">
-        <form>
-            
+        <form action="../controllers/authenticationcontroller.php" method = "post">
+            <label>Full Name</label>
+            <input type="text" placeholder = "Abeke Bekele" name="Fullname" required>
+            <label>Email</label>
+            <input type="Email" placeholder="AbebeBekele@gmail.com" name="email" required>
+            <label>Department</label>
+            <select name="Department" required>
+            <option value = "" >None</option>
+            <option value = "ComputerScience">Computer Science</option>
+            <option value = "Marketing_and_Management">Marketing and Management</option>
+            <option value = "Accounting">Accounting</option>
+            <option value = "Economics">Economics</option>
+            </select>
+            <label>Course Code</label>
+            <input type = "number" placeholder="2039" name="course_code" required>
+            <label>Password</label>
+            <input type = "password" placeholder="abebe123" name="password">
+            <input type="hidden" name="role" value="lecturer">
+            <button name="Sign-up"> Sign Up</button>
         </form>
         </div>
 
