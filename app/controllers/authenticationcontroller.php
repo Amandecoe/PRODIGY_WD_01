@@ -1,4 +1,7 @@
 <?php
+
+error_reporting(E_ALL);
+ini_set('display_errors', 1);
 session_start();
 include "../config/db.php";
 
@@ -49,23 +52,24 @@ class Users{
         }
     }
     public function RegisterLecturer(){
-        if($_POST['role']=='Lecturer'){
+        if($_POST['role'] =='lecturer'){
+            echo "INSIDE LECTURER CONDITION <br>";
             $Fullname = $_POST['Fullname'];
             $Email = $_POST['email'];
             $Department = $_POST['Department'];
             $Course_code = $_POST['course_code'];
             $Password = $_POST['password'];
-        }
-        $sql = "INSERT INTO Lecturer(Name, Email, Department, password,course_code)
-        VALUES('$Fullname' , '$Email', '$Department', '$Password', '$Course_code')";
-
-        if(mysqli_query($this->con,$sql)){
+            $sql = "INSERT INTO Lecturer(Name, Email, Department, password,course_code)
+            VALUES('$Fullname' , '$Email', '$Department', '$Password', '$Course_code')";
+            if(mysqli_query($this->con,$sql)){
             header("Location: ./UserController.php");
             exit();
         }
         else{
             echo "Wrong Email or Password, Try Again";
         }
+        }
+
     }
     public function LoginLecturer(){
 
@@ -74,4 +78,5 @@ class Users{
 $user = new Users($con);
 $user->RegisterStudent();
 $user ->LoginStudent();
+$user->RegisterLecturer();
 ?>

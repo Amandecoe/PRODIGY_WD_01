@@ -28,4 +28,5 @@ $usercontroller = new UserController($con);
 $user = $usercontroller->getLoggedinStudent();
 $Lecturer = $usercontroller->getLoggedinLecturer();
 include "../views/StudentDashboard.php";
+include "../views/LecturerDashboard.php";
 ?>
