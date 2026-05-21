@@ -1,7 +1,6 @@
 <?php
 include "../config/db.php";
 include "../models/Project.php";
-echo "FILE LOADED";
 session_start();
 class Projectcontroller{
     private $projectModel;
@@ -34,7 +33,9 @@ class Projectcontroller{
         }
         }
     public function displayproject(){
-
+        if(isset($_SESSION['id'])){
+            
+        }
     }
     }
 
