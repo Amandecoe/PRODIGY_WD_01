@@ -10,7 +10,6 @@ class Projectcontroller{
         $this->projectModel = new Project($con);
         }
     public function uploadfile(){
-        echo "FUNCTION ENTERED";
         if($_SERVER['REQUEST_METHOD'] === 'POST'){
             $title = $_POST['project-title'];
             $student_id = $_SESSION['id'];
@@ -34,6 +33,9 @@ class Projectcontroller{
             }
         }
         }
+    public function displayproject(){
+
+    }
     }
 
 $controller = new Projectcontroller($con);

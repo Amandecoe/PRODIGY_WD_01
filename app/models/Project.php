@@ -12,7 +12,7 @@ class Project{
         mysqli_query($this->con, $sql);
     }
     public function displayprojectdetails(){
-        
+        $sql = "";
     }
 }
 ?>
