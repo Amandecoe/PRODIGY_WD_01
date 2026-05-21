@@ -48,6 +48,28 @@ class Users{
             }
         }
     }
+    public function RegisterLecturer(){
+        if($_POST['role']=='Lecturer'){
+            $Fullname = $_POST['Fullname'];
+            $Email = $_POST['email'];
+            $Department = $_POST['Department'];
+            $Course_code = $_POST['course_code'];
+            $Password = $_POST['password'];
+        }
+        $sql = "INSERT INTO Lecturer(Name, Email, Department, password,course_code)
+        VALUES('$Fullname' , '$Email', '$Department', '$Password', '$Course_code')";
+
+        if(mysqli_query($this->con,$sql)){
+            header("Location: ./UserController.php");
+            exit();
+        }
+        else{
+            echo "Wrong Email or Password, Try Again";
+        }
+    }
+    public function LoginLecturer(){
+
+    }
 }
 $user = new Users($con);
 $user->RegisterStudent();

@@ -14,5 +14,4 @@
         </div>
         <a href="submit_project.php">Upload Project</a>
     </body>
-
 </html>
