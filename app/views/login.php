@@ -1,11 +1,14 @@
 <html>
+    <head>
+        <script src="../assets/js/script.js"defer></script>
+    </head>
     <body>
         <div class="form-container">
             <h3>Welcome Back</h3>
             <p>Sign in into you account</p>
         <div class = "choice-button">
-            <button>Student</button>
-            <button>Lecturer</button>
+            <button onclick="choice()" id = "Student-choice">Student</button>
+            <button onclick ="choice()" id="Lecturer-choice">Lecturer</button>
         </div>
         <div id = "Student">
             <form action = "../controllers/authenticationcontroller.php" method = "post">

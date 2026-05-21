@@ -2,6 +2,7 @@
 <html>
     <head>
         <script src="../assets/js/script.js"defer></script>
+        <style href="../assets/css/main.css"></style>
     </head>
     <body>
         <div class = "form-container">
