@@ -11,7 +11,7 @@ class Users{
         $this->con = $con;
     }
     public function RegisterStudent(){
-        if ($_POST['role'] == 'student') {
+        if(isset($_POST['role']) && $_POST['role'] == 'student'){
             $FullName = $_POST['Fullname'];
             $Email = $_POST['email'];
             $Department = $_POST['Department'];
@@ -31,7 +31,7 @@ class Users{
         }
     }
     public function LoginStudent(){
-        if($_POST['role'] == 'student'){
+        if(isset($_POST['role']) && $_POST['role'] == 'student'){
             $Email = $_POST['email'];
             $password = $_POST['password'];
 
@@ -43,6 +43,7 @@ class Users{
             $user = mysqli_fetch_assoc($result);
             session_start();
             $_SESSION['id'] = $user['id'];
+            $_SESSION['role'] = 'student';
                 header("Location: ./Usercontroller.php");
                 exit();
             }
@@ -51,32 +52,9 @@ class Users{
             }
         }
     }
-    public function RegisterLecturer(){
-        if($_POST['role'] =='lecturer'){
-            echo "INSIDE LECTURER CONDITION <br>";
-            $Fullname = $_POST['Fullname'];
-            $Email = $_POST['email'];
-            $Department = $_POST['Department'];
-            $Course_code = $_POST['course_code'];
-            $Password = $_POST['password'];
-            $sql = "INSERT INTO Lecturer(Name, Email, Department, password,course_code)
-            VALUES('$Fullname' , '$Email', '$Department', '$Password', '$Course_code')";
-            if(mysqli_query($this->con,$sql)){
-            header("Location: ./UserController.php");
-            exit();
-        }
-        else{
-            echo "Wrong Email or Password, Try Again";
-        }
-        }
 
-    }
-    public function LoginLecturer(){
-
-    }
 }
 $user = new Users($con);
 $user->RegisterStudent();
 $user ->LoginStudent();
-$user->RegisterLecturer();
 ?>

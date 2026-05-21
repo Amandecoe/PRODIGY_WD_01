@@ -1,6 +1,5 @@
 <html>
     <head>
-        <script src="../assets/js/script.js"defer></script>
     </head>
     <body>
         <div class="form-container">
@@ -11,7 +10,7 @@
             <button onclick ="choice()" id="Lecturer-choice">Lecturer</button>
         </div>
         <div id = "Student">
-            <form action = "../controllers/authenticationcontroller.php" method = "post">
+            <form action = "../controllers/Studentcontroller.php" method = "post">
                 <label>Email</label>
                 <input type = "email" name = "email" placeholder = "AbebeBekele@gmail.com" required>
                 <label>Password</label>
@@ -21,7 +20,7 @@
             </form>
         </div>
         <div id = "Lecturer">
-            <form action = "./controllers/authenticationcontroller.php" method = "post">
+            <form action = "../controllers/LecturerController.php" method = "post">
                 <label>Email</label>
                 <input type = "email" name = "email" placeholder = "AbebeBekele@gmail.com" required>
                 <label>Password</label>
@@ -32,4 +31,5 @@
         </div>
         </div>
     </body>
+    <script src="../assets/js/script.js"defer></script>
 </html>

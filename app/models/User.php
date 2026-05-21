@@ -1,7 +1,8 @@
 <?php
 
 include "../config/db.php";
-include "../controllers/authenticationcontroller.php";
+include "../controllers/Studentcontroller.php";
+include "../controllers/LecturerController.php";
 class User{
     private $con;
     public function __construct($con){

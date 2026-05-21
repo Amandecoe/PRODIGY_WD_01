@@ -1,7 +1,6 @@
 
 <html>
     <head>
-        <script src="../assets/js/script.js"defer></script>
         <style href="../assets/css/main.css"></style>
     </head>
     <body>
@@ -12,7 +11,7 @@
             <button onclick="choice()" id = "Lecturer-choice">Lecturer</button>
         </div>
         <div id = "Student">
-        <form action = "../controllers/authenticationcontroller.php" method="post">
+        <form action = "../controllers/Studentcontroller.php" method="post">
         <label>Full Name</label>
         <input type = "text" placeholder = "Abebe Bekele" name = "Fullname" required>
         <label>Email</label>
@@ -43,7 +42,7 @@
         </div>
 
         <div id = "Lecturer">
-        <form action="../controllers/authenticationcontroller.php" method = "post">
+        <form action="../controllers/LecturerController.php" method = "post">
             <label>Full Name</label>
             <input type="text" placeholder = "Abeke Bekele" name="Fullname" required>
             <label>Email</label>
@@ -57,7 +56,7 @@
             <option value = "Economics">Economics</option>
             </select>
             <label>Course Code</label>
-            <input type = "number" placeholder="2039" name="course_code" required>
+            <input type = "text" placeholder="2039" name="course_code" required>
             <label>Password</label>
             <input type = "password" placeholder="abebe123" name="password">
             <input type="hidden" name="role" value="lecturer">
@@ -67,4 +66,5 @@
 
         </div>
     </body>
+    <script src="../assets/js/script.js"defer></script>
 </html>
