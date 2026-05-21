@@ -50,6 +50,6 @@ class Users{
     }
 }
 $user = new Users($con);
-$user->Register();
-$user ->Login();
+$user->RegisterStudent();
+$user ->LoginStudent();
 ?>
