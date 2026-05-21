@@ -11,5 +11,8 @@ class Project{
         VALUES('$title','$file_path', '$student_id' , '$file_name')";
         mysqli_query($this->con, $sql);
     }
+    public function displayprojectdetails(){
+        
+    }
 }
 ?>

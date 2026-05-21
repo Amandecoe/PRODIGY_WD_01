@@ -3,8 +3,6 @@ include "../config/db.php";
 include "../models/Project.php";
 echo "FILE LOADED";
 session_start();
-error_reporting(E_ALL);
-ini_set('display_errors',1);
 class Projectcontroller{
     private $projectModel;
 
