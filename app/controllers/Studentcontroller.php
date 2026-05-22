@@ -28,23 +28,16 @@ class Users{
             $Email = $_POST['email'];
             $password = $_POST['password'];
 
-            
-
-            if(mysqli_num_rows($result)>0){
-            $user = mysqli_fetch_assoc($result);
-            session_start();
-            $_SESSION['id'] = $user['id'];
-            $_SESSION['role'] = 'student';
+            if($this->model->loginstudents($Email, $password)){
                 header("Location: ./Usercontroller.php");
                 exit();
             }
             else{
                 echo "Wrong Email or Password, Try Again";
             }
+            }
         }
     }
-
-}
 $user = new Users($con);
 if(isset($_POST['Register'])){
     $user->RegisterStudent();

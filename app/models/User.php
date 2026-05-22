@@ -30,10 +30,18 @@ class User{
             echo mysqli_error($this->con);
             }
     }
-    public function loginstudent(){
+    public function loginstudents($Email,$password){
         $sql = "SELECT * FROM STUDENT WHERE Email = '$Email'
             AND password = '$password'";
-            $result = mysqli_query($this->con, $sql);
-    }
+            if($result = mysqli_query($this->con, $sql)){
+                if(mysqli_num_rows($result)>0){
+                    $user = mysqli_fetch_assoc($result);
+                    session_start();
+                    $_SESSION['id'] = $user['id'];
+                    $_SESSION['role'] = 'student';
+            }
+            };
+
         }
+    }
 ?>
