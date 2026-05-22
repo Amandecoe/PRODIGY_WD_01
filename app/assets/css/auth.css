@@ -1,12 +1,12 @@
+@import url('https://fonts.googleapis.com/css2?family=Arvo:ital,wght@0,400;0,700;1,400;1,700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 body{
     display:flex;
     justify-content:center;
     align-items:center;
     min-height:100vh;
     margin:0;
-    font-family:'Poppins';
+    font-family: 'Arvo';
 }
-
 .form-container{
     display:flex;
     justify-content: center;
@@ -31,12 +31,18 @@ input{
     height: 40px;
     border:0.6px solid rgba(138, 134, 134, 0.341);
     border-radius:5px;
+    padding-left: 20px;
+    padding-right: 20px;
 }
 input::placeholder {
     font-weight: 100;
 }
 label{
     margin:5px;
+}
+select{
+    border-radius:5px;
+    border:0.6px solid rgba(138, 134, 134, 0.341);
 }
 #final{
     margin:15px;
