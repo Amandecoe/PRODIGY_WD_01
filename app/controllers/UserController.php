@@ -11,7 +11,7 @@ class UserController{
     public function getLoggedinStudent(){
         if(!isset($_SESSION['id'])){
             header("Location: ../views/login.php"); //if user is not logged in direct him to the login page
-            exit();
+            exit;
         }
         $user_id = $_SESSION['id']; //id of the currently logged in user
         return $this->userModel->getstudentbyid($user_id); //use the function in User.php to get the user by his id (which we stored in $user_id just above)
