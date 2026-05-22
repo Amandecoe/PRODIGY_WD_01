@@ -1,14 +1,14 @@
 <?php
-
-error_reporting(E_ALL);
-ini_set('display_errors', 1);
 session_start();
 include "../config/db.php";
+include "../models/User.php";
 
 class Users{
     private $con;
+    private $model;
     public function __construct($con){
         $this->con = $con;
+        $this->model = new User($con);
     }
     public function RegisterStudent(){
         if(isset($_POST['role']) && $_POST['role'] == 'student'){
@@ -19,15 +19,8 @@ class Users{
             $Semester = $_POST['Semester'];
             $password = $_POST['password'];
             $StudentID = $_POST['Student_Id'];
-
-            $sql = "INSERT INTO Student(Name,Email,Department,Year, Semester, password, Student_iD)
-            VALUES('$FullName', '$Email', '$Department','$Year','$Semester','$password','$StudentID')";
-
-            if(mysqli_query($this->con, $sql)){
-                header("Location: ./Usercontroller.php");
-            }else{
-            echo mysqli_error($this->con);
-            }
+            $this->model->registerstudent($FullName, $Email, $Department, $Year, $Semester, $password, $StudentID);
+            header("Location: ../views/login.php");
         }
     }
     public function LoginStudent(){
@@ -35,9 +28,7 @@ class Users{
             $Email = $_POST['email'];
             $password = $_POST['password'];
 
-            $sql = "SELECT * FROM STUDENT WHERE Email = '$Email'
-            AND password = '$password'";
-            $result = mysqli_query($this->con, $sql);
+            
 
             if(mysqli_num_rows($result)>0){
             $user = mysqli_fetch_assoc($result);
@@ -55,6 +46,11 @@ class Users{
 
 }
 $user = new Users($con);
-$user->RegisterStudent();
-$user ->LoginStudent();
+if(isset($_POST['Register'])){
+    $user->RegisterStudent();
+}
+
+if(isset($_POST['Login'])){
+    $user->LoginStudent();
+}
 ?>

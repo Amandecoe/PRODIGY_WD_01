@@ -20,5 +20,20 @@ class User{
         $result = mysqli_query($this->con, $sql);
         return mysqli_fetch_assoc($result);
     }
+    public function registerstudent($FullName, $Email, $Department, $Year, $Semester, $password, $StudentID){
+        $sql = "INSERT INTO Student(Name,Email,Department,Year, Semester, password, Student_iD)
+            VALUES('$FullName', '$Email', '$Department','$Year','$Semester','$password','$StudentID')";
+
+            if($result=mysqli_query($this->con, $sql)){
+                return mysqli_fetch_assoc($result);
+            }else{
+            echo mysqli_error($this->con);
+            }
+    }
+    public function loginstudent(){
+        $sql = "SELECT * FROM STUDENT WHERE Email = '$Email'
+            AND password = '$password'";
+            $result = mysqli_query($this->con, $sql);
+    }
         }
 ?>

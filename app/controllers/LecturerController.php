@@ -16,7 +16,7 @@ class Lecturer{
             $sql = "INSERT INTO Lecturer(Name, Email, Department, password,course_code)
             VALUES('$Fullname' , '$Email', '$Department', '$Password', '$Course_code')";
             if(mysqli_query($this->con,$sql)){
-            header("Location: ./UserController.php");
+            header("Location: ../views/login.php");
             exit();
         }
         else{
