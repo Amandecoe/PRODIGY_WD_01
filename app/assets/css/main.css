@@ -20,12 +20,14 @@ form{
     display:flex;
     flex-direction: column;
     justify-content: center;
-    margin:10px;
     width:300px;
+    font-size: 16px;
+    font-weight:100;
 }
 input{
     width:300px;
     height: 35px;
+    border:0.6px solid rgba(112, 109, 109, 0.555);
 }
 label{
     margin:10px;
@@ -42,4 +44,29 @@ label{
     flex-direction: row;
     gap:10px;
 }
-
+#Student-choice{
+    width:100px;
+    height:40px;
+    border-radius: 15px;
+    color:black;
+    background-color: white;
+    border: 1px solid rgb(194, 192, 192);
+}
+#Lecturer-choice{
+    width:100px;
+    height:40px;
+    border-radius: 15px;
+    color:black;
+    background-color: white;
+    border: 1px solid rgb(194, 192, 192);
+}
+#Lecturer-choice:hover{
+    color:white;
+    background-color: black;
+    border: 1px solid black;
+}
+#Student-choice:hover{
+    color:white;
+    background-color: black;
+    border: 1px solid black;
+}

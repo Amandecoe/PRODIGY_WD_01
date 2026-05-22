@@ -1,10 +1,11 @@
 
 <html>
     <head>
+        <link rel="stylesheet" href="../assets/css/main.css"/>
     </head>
     <body>
         <div class="form-container">
-            <h3>Welcome Back</h3>
+            <h2>Welcome Back</h2>
             <p>Sign in into you account</p>
         <div class = "choice-button">
             <button onclick="choice()" id = "Student-choice">Student</button>
@@ -17,7 +18,7 @@
                 <label>Password</label>
                 <input type="password" name = "password" placeholder = "user123" required>
                 <input type="hidden" name="role" value="student">
-                <button type="submit" name = "Login"> Sign In</button>
+                <button id="final" type="submit" name = "Login"> Sign In</button>
             </form>
         </div>
         <div id = "Lecturer">
@@ -27,7 +28,7 @@
                 <label>Password</label>
                 <input type="password" name = "password" placeholder = "abebe123" required>
                 <input type="hidden" name="role" value="lecturer">
-                <button type="submit" name = "Login">Sign In</button>
+                <button id="final" type="submit" name = "Login">Sign In</button>
             </form>
         </div>
         </div>
