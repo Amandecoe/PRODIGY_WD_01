@@ -1,0 +1,28 @@
+<?php
+
+include "../config/db.php";
+require_once "../models/User.php";
+include "../models/Project.php";
+
+$userModel = new User($con);
+$projectModel = new Project($con);
+
+if(!isset($_SESSION['role'])){
+    die("Not logged in");
+}
+
+if($_SESSION['role'] == 'lecturer'){
+
+    $Lecturer = $userModel->getlecturerbyid($_SESSION['id']);
+    $projects = $projectModel->displayprojectdetails();
+    include "../views/LecturerDashboard.php";
+    exit();
+}
+
+if($_SESSION['role'] == 'student'){
+
+    $Student = $userModel->getstudentbyid($_SESSION['id']);
+    include "../views/StudentDashboard.php";
+    exit();
+}
+?>

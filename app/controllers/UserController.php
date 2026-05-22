@@ -1,4 +1,6 @@
 <?php
+error_reporting(E_ALL);
+ini_set('display_errors', 1);
 session_start();
 //controller to get logged in user's information
 include "../config/db.php";
@@ -33,7 +35,7 @@ if(isset($_SESSION['role']) && $_SESSION['role'] == 'student'){
 
 elseif(isset($_SESSION['role']) && $_SESSION['role'] == 'lecturer'){
     $Lecturer = $usercontroller->getLoggedinLecturer();
-    include "../views/LecturerDashboard.php"; // if the logged in user is lecturer get the lecturer and pass it to dashboard
+    include "../controllers/DashboardController.php"; // if the logged in user is lecturer get the lecturer and pass it to dashboard
     exit();
 }
 else {

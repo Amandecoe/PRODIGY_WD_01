@@ -12,10 +12,12 @@ class Project{
         mysqli_query($this->con, $sql);
     }
     public function displayprojectdetails(){
-        $sql = "SELECT";
+        $sql = "SELECT * FROM Submissions";
+        $result=mysqli_query($this->con, $sql);
+        return $result;
     }
     public function displayprojectnumber(){
-        $sql = "";
+        $sql = "SELECT COUNT(*) FROM Submissions";
     }
 }
 ?>

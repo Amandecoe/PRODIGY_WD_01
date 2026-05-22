@@ -36,12 +36,33 @@ class Projectcontroller{
         }
     public function displayallproject(){
         if(isset($_SESSION['id'])){
-
+            return $this->projectModel->displayprojectdetails();
         }
+        return false;
     }
 
     }
 
 $controller = new Projectcontroller($con);
-$controller->uploadfile();
+
+if(isset($_SESSION['role'])){
+    echo "No session";
+    exit();
+    }
+    
+    if($_SESSION['role'] == 'student'){
+        $controller->uploadfile();
+        include "../views/StudentDashboard.php";
+        exit();
+    }
+
+    elseif($_SESSION['role'] == 'lecturer'){
+        $projects = $controller->displayallproject();
+        include "../views/LecturerDashboard.php";
+        exit();
+    }
+else{
+    echo "No session found";
+}
+
 ?>
