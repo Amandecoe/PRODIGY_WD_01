@@ -36,7 +36,8 @@ class Users{
                     exit();
                 }
             else{
-                echo "Wrong Email or Password, Try Again";
+                header("Location: ../views/login.php?error=invalid");
+                exit();
                 }
             }
         }

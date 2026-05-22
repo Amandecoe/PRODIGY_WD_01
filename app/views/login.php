@@ -1,3 +1,4 @@
+
 <html>
     <head>
     </head>
@@ -33,3 +34,10 @@
     </body>
     <script src="../assets/js/script.js"defer></script>
 </html>
+<?php
+if(isset($_GET['error'])){
+    if($_GET['error'] == 'invalid'){
+        echo "<p style='color:red;'>Wrong Email or Password, Try Again</p>";
+    }
+}
+?>
