@@ -24,12 +24,11 @@ class User{
 
             $result=mysqli_query($this->con, $sql);
             if($result){
-        return true;
-    }
-
-    return false;
+                return true;
+            }
+            return false;
 }
-    
+
     public function loginstudents($Email,$password){
         $sql = "SELECT * FROM STUDENT WHERE Email = '$Email'
             AND password = '$password'";
