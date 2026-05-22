@@ -1,5 +1,6 @@
 <?php
-session_start();
+error_reporting(E_ALL);
+ini_set('display_errors', 1);
 include "../config/db.php";
 include "../models/User.php";
 
@@ -27,14 +28,18 @@ class Users{
         if(isset($_POST['role']) && $_POST['role'] == 'student'){
             $Email = $_POST['email'];
             $password = $_POST['password'];
+            $user=$this->model->loginstudents($Email, $password);
 
-            if($this->model->loginstudents($Email, $password)){
-                header("Location: ./Usercontroller.php");
-                exit();
-            }
+            if($user){
+                    session_start();
+                    $_SESSION['id'] = $user['id'];
+                    $_SESSION['role'] = 'student';
+                    header("Location: ./Usercontroller.php");
+                    exit();
+                }
             else{
                 echo "Wrong Email or Password, Try Again";
-            }
+                }
             }
         }
     }

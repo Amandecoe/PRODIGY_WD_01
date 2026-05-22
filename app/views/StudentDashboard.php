@@ -12,6 +12,6 @@
         </div>
         <div id = "Projects">
         </div>
-        <a href="submit_project.php">Upload Project</a>
+        <a href="./submit_project.php">Upload Project</a>
     </body>
 </html>

@@ -1,4 +1,5 @@
 <?php
+session_start();
 //controller to get logged in user's information
 include "../config/db.php";
 include "../models/User.php";

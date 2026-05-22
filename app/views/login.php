@@ -16,7 +16,7 @@
                 <label>Password</label>
                 <input type="password" name = "password" placeholder = "user123" required>
                 <input type="hidden" name="role" value="student">
-                <button name = "Login"> Sign In</button>
+                <button type="submit" name = "Login"> Sign In</button>
             </form>
         </div>
         <div id = "Lecturer">
@@ -26,7 +26,7 @@
                 <label>Password</label>
                 <input type="password" name = "password" placeholder = "abebe123" required>
                 <input type="hidden" name="role" value="lecturer">
-                <button name = "Login">Sign In</button>
+                <button type="submit" name = "Login">Sign In</button>
             </form>
         </div>
         </div>

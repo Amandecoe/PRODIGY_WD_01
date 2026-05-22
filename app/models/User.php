@@ -1,8 +1,6 @@
 <?php
 
 include "../config/db.php";
-include "../controllers/Studentcontroller.php";
-include "../controllers/LecturerController.php";
 class User{
     private $con;
     public function __construct($con){
@@ -33,15 +31,16 @@ class User{
     public function loginstudents($Email,$password){
         $sql = "SELECT * FROM STUDENT WHERE Email = '$Email'
             AND password = '$password'";
-            if($result = mysqli_query($this->con, $sql)){
-                if(mysqli_num_rows($result)>0){
-                    $user = mysqli_fetch_assoc($result);
-                    session_start();
-                    $_SESSION['id'] = $user['id'];
-                    $_SESSION['role'] = 'student';
-            }
-            };
+            $result = mysqli_query($this->con, $sql);
+            if(!$result){
+                return false;
+                }
 
+            if(mysqli_num_rows($result)>0){
+                    $user = mysqli_fetch_assoc($result);
+                    return $user;
+            }
+            return false;
         }
     }
 ?>
