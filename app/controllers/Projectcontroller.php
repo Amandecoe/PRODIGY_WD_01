@@ -15,6 +15,7 @@ class Projectcontroller{
             $file_name = $_FILES['project-file']['name'];
             $tmp_name = $_FILES['project-file']['tmp_name'];
             $folder = "../uploads/".$file_name;
+            $project_description = $_POST['project-description'];
             if(move_uploaded_file($tmp_name, $folder)){
 
                 $this->projectModel->saveprojectdetails(
@@ -22,6 +23,7 @@ class Projectcontroller{
                     $folder,
                     $student_id,
                     $file_name,
+                    $project_description,
                 );
 
                 header("Location: ../views/Dashboard.php");
@@ -32,11 +34,12 @@ class Projectcontroller{
             }
         }
         }
-    public function displayproject(){
+    public function displayallproject(){
         if(isset($_SESSION['id'])){
-            
+
         }
     }
+
     }
 
 $controller = new Projectcontroller($con);
