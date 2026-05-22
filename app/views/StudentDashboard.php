@@ -1,4 +1,7 @@
 <html>
+    <head>
+        <link rel="stylesheet" href="../assets/css/"/>
+    </head>
     <body>
         <h1>Dashboard</h1>
         <p>Welcome <?php echo $user['Name']?></p>
@@ -12,6 +15,6 @@
         </div>
         <div id = "Projects">
         </div>
-        <a href="./submit_project.php">Upload Project</a>
+        <a href="/Proj_Sub/app/views/submit_project.php">Upload Project</a>
     </body>
 </html>
