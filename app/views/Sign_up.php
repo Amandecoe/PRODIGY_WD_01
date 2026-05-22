@@ -1,6 +1,6 @@
 <html>
     <head>
-        <link rel="stylesheet" href="../assets/css/main.css">
+        <link rel="stylesheet" href="../assets/css/auth.css">
     </head>
     <body>
         <div class = "form-container">
