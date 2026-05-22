@@ -39,6 +39,7 @@
         <input type="hidden" name="role" value="student">
         <button id="final" name = "Register">Sign Up</button>
         </form>
+        <p id="link"><a href="./login.php">Already has an Account?</a></p>
         </div>
 
         <div id = "Lecturer">
@@ -62,6 +63,7 @@
             <input type="hidden" name="role" value="lecturer">
             <button id = "final" name="Register"> Sign Up</button>
         </form>
+        <p id="link"><a href="./login.php">Already has an Account?</a></p>
         </div>
 
         </div>
