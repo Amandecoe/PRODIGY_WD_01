@@ -4,10 +4,10 @@
     </head>
     <body>
         <div class = "form-container">
-        <h3>Create Account</h3>
+        <h2>Create Account</h2>
         <div class = "choice-button">
-            <button onclick="choice()" id="Student-choice" >Student</button>
-            <button onclick="choice()" id = "Lecturer-choice">Lecturer</button>
+            <button  onclick="choice()" id="Student-choice" >Student</button>
+            <button  onclick="choice()" id = "Lecturer-choice">Lecturer</button>
         </div>
         <div id = "Student">
         <form action = "../controllers/Studentcontroller.php" method="post">
