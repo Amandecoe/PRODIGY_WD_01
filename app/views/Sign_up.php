@@ -1,7 +1,6 @@
-
 <html>
     <head>
-        <style href="../assets/css/main.css"></style>
+        <link rel="stylesheet" href="../assets/css/main.css">
     </head>
     <body>
         <div class = "form-container">
@@ -37,7 +36,7 @@
         <label>Password</label>
         <input type = "password" placeholder = "user123" name = "password" required>
         <input type="hidden" name="role" value="student">
-        <button name = "Register">Sign Up</button>
+        <button id="final" name = "Register">Sign Up</button>
         </form>
         </div>
 
@@ -60,7 +59,7 @@
             <label>Password</label>
             <input type = "password" placeholder="abebe123" name="password">
             <input type="hidden" name="role" value="lecturer">
-            <button name="Register"> Sign Up</button>
+            <button id = "final" name="Register"> Sign Up</button>
         </form>
         </div>
 

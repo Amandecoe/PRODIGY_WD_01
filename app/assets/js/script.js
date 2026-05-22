@@ -3,16 +3,16 @@ let lecturer = document.getElementById("Lecturer");
 let studentchoicebutton = document.getElementById("Student-choice");
 let lecturerchoicebutton = document.getElementById("Lecturer-choice");
 
-student.style.display = "block"; //default when the pages load
+student.style.display = "inline"; //default when the pages load
 lecturer.style.display = "none";
 
 function choice(){
     studentchoicebutton.addEventListener("click", () => {
-        student.style.display = "block";
+        student.style.display = "inline";
         lecturer.style.display = "none";
     });
 
     lecturerchoicebutton.addEventListener("click", () => {
-        lecturer.style.display = "block";
+        lecturer.style.display = "inline";
         student.style.display = "none";
     })};
