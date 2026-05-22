@@ -4,6 +4,7 @@ body{
     align-items:center;
     min-height:100vh;
     margin:0;
+    font-family:'Poppins';
 }
 
 .form-container{
@@ -30,6 +31,9 @@ input{
     height: 35px;
     border:0.6px solid rgba(138, 134, 134, 0.341);
     border-radius:5px;
+}
+input::placeholder {
+    font-weight: 100;
 }
 label{
     margin:5px;
@@ -58,9 +62,9 @@ label{
     width:100px;
     height:40px;
     border-radius: 15px;
-    color:black;
-    background-color: white;
-    border: 1px solid rgb(194, 192, 192);
+    color:rgb(255, 255, 255);
+    background-color: black;
+    border: 1px solid black;
 }
 #Lecturer-choice{
     width:100px;
@@ -69,16 +73,6 @@ label{
     color:black;
     background-color: white;
     border: 1px solid rgb(194, 192, 192);
-}
-#Lecturer-choice:hover{
-    color:white;
-    background-color: black;
-    border: 1px solid black;
-}
-#Student-choice:hover{
-    color:white;
-    background-color: black;
-    border: 1px solid black;
 }
 #link{
     text-align: center;

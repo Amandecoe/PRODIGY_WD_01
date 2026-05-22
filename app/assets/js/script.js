@@ -16,3 +16,6 @@ function choice(){
         lecturer.style.display = "inline";
         student.style.display = "none";
     })};
+
+    
+
