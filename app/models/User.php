@@ -22,12 +22,14 @@ class User{
         $sql = "INSERT INTO Student(Name,Email,Department,Year, Semester, password, Student_iD)
             VALUES('$FullName', '$Email', '$Department','$Year','$Semester','$password','$StudentID')";
 
-            if($result=mysqli_query($this->con, $sql)){
-                return mysqli_fetch_assoc($result);
-            }else{
-            echo mysqli_error($this->con);
-            }
+            $result=mysqli_query($this->con, $sql);
+            if($result){
+        return true;
     }
+
+    return false;
+}
+    
     public function loginstudents($Email,$password){
         $sql = "SELECT * FROM STUDENT WHERE Email = '$Email'
             AND password = '$password'";
