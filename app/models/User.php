@@ -43,9 +43,9 @@ class User{
             }
             return false;
         }
-    public function RegisterLecturers($Fullname, $Email, $Department, $Course_code, $Password){
+    public function RegisterLecturers($Fullname, $Email, $Department, $Password, $Course_code){
         $sql = "INSERT INTO Lecturer(Name, Email, Department, password,course_code)
-            VALUES('$Fullname' , '$Email', '$Department', '$Password', '$Course_code'}";
+            VALUES('$Fullname' , '$Email', '$Department', '$Password', '$Course_code')";
             $result = mysqli_query($this->con, $sql);
             if($result){
                 return true;
@@ -56,10 +56,12 @@ class User{
         $sql = "SELECT * FROM Lecturer WHERE Email = '$Email'
             AND password = '$password'";
             $result = mysqli_query($this->con, $sql);
+            
             if(mysqli_num_rows($result)>0){
             $user = mysqli_fetch_assoc($result);
             return $user;
             }
+            return false;
     }
 }
 ?>

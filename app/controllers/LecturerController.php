@@ -1,4 +1,5 @@
 <?php
+
 include "../config/db.php";
 include "../models/User.php";
 class Lecturer{
@@ -9,13 +10,13 @@ class Lecturer{
         $this->model = new User($con);
     }
     public function RegisterLecturer(){
-        if(isset($_POST['Register'])){
+        if(isset($_POST['role']) && $_POST['role'] == 'lecturer'){
             $Fullname = $_POST['Fullname'];
             $Email = $_POST['email'];
             $Department = $_POST['Department'];
             $Course_code = $_POST['course_code'];
             $Password = $_POST['password'];
-            $user = $this->model->RegisterLecturers($Fullname,$Email,$Department,$Course_code,$Password);
+            $user = $this->model->RegisterLecturers($Fullname,$Email,$Department,$Password,$Course_code);
             if($user){
             header("Location: ../views/login.php");
             exit();
@@ -26,7 +27,7 @@ class Lecturer{
         }
         }
     public function LoginLecturer(){
-        if(isset($_POST['Login'])){
+        if(isset($_POST['role']) && $_POST['role'] == 'lecturer'){
             $Email = $_POST['email'];
             $password = $_POST['password'];
             $user = $this->model->Loginlecturers($Email,$password);
