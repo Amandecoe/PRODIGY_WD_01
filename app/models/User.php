@@ -43,5 +43,14 @@ class User{
             }
             return false;
         }
+    public function RegisterLecturers($Fullname, $Email, $Department, $Course_code, $Password){
+        $sql = "INSERT INTO Lecturer(Name, Email, Department, password,course_code)
+            VALUES('$Fullname' , '$Email', '$Department', '$Password', '$Course_code'}";
+            $result = mysqli_query($this->con, $sql);
+            if($result){
+                return true;
+            }
+            return false;
     }
+}
 ?>

@@ -1,10 +1,12 @@
 <?php
 include "../config/db.php";
+include "../models/User.php";
 class Lecturer{
-
+    private $model;
     private $con;
     public function __construct($con){
         $this->con = $con;
+        $this->model = new User($con);
     }
     public function RegisterLecturer(){
         if(isset($_POST['Register'])){
@@ -13,9 +15,7 @@ class Lecturer{
             $Department = $_POST['Department'];
             $Course_code = $_POST['course_code'];
             $Password = $_POST['password'];
-            $sql = "INSERT INTO Lecturer(Name, Email, Department, password,course_code)
-            VALUES('$Fullname' , '$Email', '$Department', '$Password', '$Course_code')";
-            if(mysqli_query($this->con,$sql)){
+            if ($this->model->RegisterLecturers($Fullname,$Email,$Department,$Course_code,$Password)){
             header("Location: ../views/login.php");
             exit();
         }
