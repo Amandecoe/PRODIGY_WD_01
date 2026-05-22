@@ -52,5 +52,14 @@ class User{
             }
             return false;
     }
+    public function Loginlecturers($Email,$password){
+        $sql = "SELECT * FROM Lecturer WHERE Email = '$Email'
+            AND password = '$password'";
+            $result = mysqli_query($this->con, $sql);
+            if(mysqli_num_rows($result)>0){
+            $user = mysqli_fetch_assoc($result);
+            return $user;
+            }
+    }
 }
 ?>

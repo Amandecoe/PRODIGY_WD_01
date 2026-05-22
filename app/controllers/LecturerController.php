@@ -15,7 +15,8 @@ class Lecturer{
             $Department = $_POST['Department'];
             $Course_code = $_POST['course_code'];
             $Password = $_POST['password'];
-            if ($this->model->RegisterLecturers($Fullname,$Email,$Department,$Course_code,$Password)){
+            $user = $this->model->RegisterLecturers($Fullname,$Email,$Department,$Course_code,$Password);
+            if($user){
             header("Location: ../views/login.php");
             exit();
         }
@@ -23,19 +24,13 @@ class Lecturer{
             echo "Wrong Email or Password, Try Again";
         }
         }
-
-    }
+        }
     public function LoginLecturer(){
         if(isset($_POST['Login'])){
             $Email = $_POST['email'];
             $password = $_POST['password'];
-
-            $sql = "SELECT * FROM Lecturer WHERE Email = '$Email'
-            AND password = '$password'";
-            $result = mysqli_query($this->con, $sql);
-
-            if(mysqli_num_rows($result)>0){
-            $user = mysqli_fetch_assoc($result);
+            $user = $this->model->Loginlecturers($Email,$password);
+            if($user){
             session_start();
             $_SESSION['id'] = $user['id'];
             $_SESSION['role'] = 'lecturer';
