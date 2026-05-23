@@ -29,7 +29,7 @@ class UserController{
 $usercontroller = new UserController($con);
 if(isset($_SESSION['role']) && $_SESSION['role'] == 'student'){
     $user = $usercontroller->getLoggedinStudent(); //if the logged in user is student get the student and pass it to dashboard
-    include "../views/StudentDashboard.php";
+    include "../controllers/DashboardController.php";
     exit();
 }
 
