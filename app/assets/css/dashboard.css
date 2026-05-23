@@ -13,7 +13,8 @@ p{
 #top-section{
     display:flex;
     flex-direction: row;
-    justify-content: center;
+    justify-content: start;
+    margin-left:30px;
     gap: 20px;
 }
 #top-cards{
