@@ -14,11 +14,12 @@ p{
     display:flex;
     flex-direction: row;
     justify-content: center;
-    gap: 10px;
+    gap: 20px;
 }
 #top-cards{
     width:300px;
     height: 100px;
     border: 1px solid rgba(168, 165, 165, 0.377);
-    text-align: center;
+    border-radius:25px;
+    padding-left:15px;
 }
