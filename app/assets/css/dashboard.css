@@ -11,8 +11,11 @@ p{
     font-family: 'Lato';
 }
 #top-section{
-    
+    display:flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 10px;
 }
 #top-cards{
-
+    width:300px;
 }
