@@ -4,7 +4,7 @@
     </head>
     <body>
         <h1>Dashboard</h1>
-        <p>Welcome <?php echo $Lecturer['Name']?></p>
+        <h3>Welcome <?php echo $Lecturer['Name']?></h3>
         <div class="Projects">
             <h2>Projects</h2>
         <?php while($project = mysqli_fetch_assoc($projects) ) { ?>
