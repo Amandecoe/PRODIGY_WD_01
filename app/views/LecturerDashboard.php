@@ -1,5 +1,7 @@
-
 <html>
+    <head>
+        <link rel="stylesheet" href="../assets/css/dashboard.css"/>
+    </head>
     <body>
         <h1>Dashboard</h1>
         <p>Welcome <?php echo $Lecturer['Name']?></p>

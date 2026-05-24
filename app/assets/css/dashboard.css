@@ -24,3 +24,12 @@ p{
     border-radius:25px;
     padding-left:15px;
 }
+.Projects{
+    display:flex;
+    flex-direction: column;
+    gap:10px;
+}
+.project-card{
+    display: flex;
+    flex-direction: row;
+}
