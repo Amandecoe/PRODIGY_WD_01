@@ -19,6 +19,7 @@
         <a href="../<?php echo $project['file_path']; ?>" download>
             Download
         </a>
+        <a>Grade</a>
     </div>
 <?php } ?>
     </body>
