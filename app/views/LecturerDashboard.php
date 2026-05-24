@@ -4,10 +4,10 @@
         <p>Welcome <?php echo $Lecturer['Name']?></p>
         <?php while($project = mysqli_fetch_assoc($projects)) { ?>
         <div class="project-card">
-        <p>
+        <h3>
             Project Title:
             <?php echo $project['project_title']; ?>
-        </p>
+        </h3>
         <p>
             Student ID:
             <?php echo $project['Student_id']; ?>
