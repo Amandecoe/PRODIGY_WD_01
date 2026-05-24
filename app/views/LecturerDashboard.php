@@ -1,6 +1,4 @@
 <?php
-error_reporting(E_ALL);
-ini_set('display_errors', 1);
 ?>
 <html>
     <body>
@@ -8,7 +6,7 @@ ini_set('display_errors', 1);
         <p>Welcome <?php echo $Lecturer['Name']?></p>
         <div class="Projects">
             <h2>Projects</h2>
-        <?php while($project = mysqli_fetch_assoc($projects)) { ?>
+        <?php while($project = mysqli_fetch_assoc($projects) ) { ?>
         <div class="project-card">
         <h3>
             Project Title:
