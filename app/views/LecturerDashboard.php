@@ -21,6 +21,7 @@ ini_set('display_errors', 1);
             $userModel->getStudentBySubmission(
             $project['Student_id']
             );
+            echo $student['Name'];
     ?>
         </p>
         <p>
