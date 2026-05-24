@@ -14,6 +14,15 @@
         </div>
         </div>
         <div id = "Projects">
+            <div class="project-card">
+                <h3>
+                Lecturer:
+                <?php ?>
+                </h3>
+                <p>
+
+                </p>
+            </div>
         </div>
         <a href="/Proj_Sub/app/views/submit_project.php">Upload Project</a>
     </body>

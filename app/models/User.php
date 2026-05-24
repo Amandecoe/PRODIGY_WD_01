@@ -56,12 +56,18 @@ class User{
         $sql = "SELECT * FROM Lecturer WHERE Email = '$Email'
             AND password = '$password'";
             $result = mysqli_query($this->con, $sql);
-            
+
             if(mysqli_num_rows($result)>0){
             $user = mysqli_fetch_assoc($result);
             return $user;
             }
             return false;
+    }
+    public function getStudentBySubmission($student_id){
+    $sql = "SELECT * FROM Student
+            WHERE id='$student_id'";
+    $result = mysqli_query($this->con,$sql);
+    return mysqli_fetch_assoc($result);
     }
 }
 ?>
