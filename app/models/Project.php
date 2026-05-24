@@ -8,7 +8,7 @@ class Project{
     }
     public function saveprojectdetails($title, $file_path, $student_id, $file_name, $project_description){
         $sql = "INSERT INTO Submissions(project_title, file_path, Student_id, file_name, project_description)
-        VALUES('$title','$file_path', '$student_id' , '$file_name',''$project_description)";
+        VALUES('$title','$file_path', '$student_id' , '$file_name','$project_description')";
         mysqli_query($this->con, $sql);
     }
     public function displayprojectdetails(){

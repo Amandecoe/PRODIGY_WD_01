@@ -1,5 +1,5 @@
 <?php
-
+session_start();
 include "../config/db.php";
 require_once "../models/User.php";
 include "../models/Project.php";

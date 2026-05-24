@@ -1,4 +1,6 @@
 <?php
+error_reporting(E_ALL);
+ini_set('display_errors', 1);
 include "../config/db.php";
 include "../models/Project.php";
 session_start();
@@ -25,8 +27,7 @@ class Projectcontroller{
                     $file_name,
                     $project_description,
                 );
-
-                header("Location: ../views/Dashboard.php");
+                header("Location: ../controllers/DashboardController.php");
                 exit();
 
             } else {
@@ -45,11 +46,11 @@ class Projectcontroller{
 
 $controller = new Projectcontroller($con);
 
-if(isset($_SESSION['role'])){
+if(!isset($_SESSION['role'])){
     echo "No session";
     exit();
     }
-    
+
     if($_SESSION['role'] == 'student'){
         $controller->uploadfile();
         include "../views/StudentDashboard.php";
