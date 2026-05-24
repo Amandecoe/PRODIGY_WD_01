@@ -6,6 +6,8 @@ ini_set('display_errors', 1);
     <body>
         <h1>Dashboard</h1>
         <p>Welcome <?php echo $Lecturer['Name']?></p>
+        <div class="Projects">
+            <h2>Projects</h2>
         <?php while($project = mysqli_fetch_assoc($projects)) { ?>
         <div class="project-card">
         <h3>
@@ -39,5 +41,6 @@ ini_set('display_errors', 1);
         <a>Grade</a>
     </div>
 <?php } ?>
+</div>
     </body>
 </html>
