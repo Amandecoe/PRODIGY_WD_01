@@ -96,4 +96,8 @@ p{
 }
 .top-container{
     display: flex;
+    flex-direction: row;
+}
+#assign-project{
+    
 }
