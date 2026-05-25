@@ -18,7 +18,7 @@
         </form>
         </div>
         <div id="assign-project">
-            <a class="assign-btn">Assign Project</a>
+            <a class="assign-btn">Assign Project +</a>
         </div>
         </div>
         <?php while($project = mysqli_fetch_assoc($projects) ) { ?>
