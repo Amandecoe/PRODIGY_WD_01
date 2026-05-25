@@ -69,5 +69,8 @@ class User{
     $result = mysqli_query($this->con,$sql);
     return mysqli_fetch_assoc($result);
     }
+    public function totalstudentsnumber(){
+        
+    }
 }
 ?>

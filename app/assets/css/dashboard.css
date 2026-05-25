@@ -15,14 +15,21 @@ p{
     flex-direction: row;
     justify-content: start;
     margin-left:30px;
-    gap: 20px;
+    gap: 40px;
 }
 #top-cards{
     width:300px;
-    height: 100px;
+    height: 150px;
     border: 1px solid rgba(168, 165, 165, 0.377);
     border-radius:25px;
     padding-left:15px;
+    padding:0 20px;
+    margin-top:20px;
+}
+#top-cards:hover{
+    transform: scale(1.1);
+    transition-duration:0.2s;
+    box-shadow: 2px 2px 2px 2px rgb(196, 194, 194);
 }
 .Projects{
     display:flex;
