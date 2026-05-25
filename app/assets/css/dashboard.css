@@ -29,8 +29,14 @@ p{
     flex-direction: column;
     gap:10px;
     border:0.6px solid rgba(138, 134, 134, 0.341);
+    border-radius: 25px;
+    padding: 30px;
 }
 .project-card{
     display: flex;
     flex-direction: column;
+    border:0.6px solid rgba(138, 134, 134, 0.341);
+    height:200px;
+    border-radius: 25px;
+    padding:20px;
 }
