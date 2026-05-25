@@ -13,9 +13,10 @@
         <div class="Projects">
             <h2>Projects</h2>
 
-        <form method="GET">
+        <form class="search" method="GET">
         <input type="text" name="search" placeholder="Search projects...">
-        <button type="submit">Search</button>
+        <button class="submit" type="submit">Search</button>
+        <a href="" class="clear-btn">Clear</a>
         </form>
         <?php while($project = mysqli_fetch_assoc($projects) ) { ?>
         <div class="project-card">
