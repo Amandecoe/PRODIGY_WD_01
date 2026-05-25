@@ -31,16 +31,17 @@
                 <input type="hidden" name="role" value="lecturer">
                 <button id="final" type="submit" name = "Login">Sign In</button>
             </form>
+            <?php
+                if(isset($_GET['error'])){
+                if($_GET['error'] == 'invalid'){
+                echo "<p style='color:red;'>Wrong Email or Password, Try Again</p>";
+                }
+                    }
+            ?>
             <p id="link"><a href="./Sign_up.php">Create an Account?</a></p>
         </div>
         </div>
     </body>
     <script src="../assets/js/script.js"defer></script>
 </html>
-<?php
-if(isset($_GET['error'])){
-    if($_GET['error'] == 'invalid'){
-        echo "<p style='color:red;'>Wrong Email or Password, Try Again</p>";
-    }
-}
-?>
+
