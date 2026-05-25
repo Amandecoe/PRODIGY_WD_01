@@ -5,7 +5,7 @@
     <body>
         <div class="top-title">
         <h1>Dashboard</h1>
-        <h3>Welcome <?php echo $Lecturer['Name']?></h3>
+        <p>Manage your Student's Projects and Grade them</p>
         </div>
         <div class="Projects">
             <h2>Projects</h2>
