@@ -5,6 +5,9 @@
     <body>
         <h1>Dashboard</h1>
         <h3>Welcome <?php echo $Lecturer['Name']?></h3>
+        <div id = "assign-project">
+            
+        </div>
         <div class="Projects">
             <h2>Projects</h2>
         <?php while($project = mysqli_fetch_assoc($projects) ) { ?>
