@@ -11,13 +11,22 @@ class Project{
         VALUES('$title','$file_path', '$student_id' , '$file_name','$project_description')";
         mysqli_query($this->con, $sql);
     }
-    public function displayprojectdetails(){
-        $sql = "SELECT * FROM Submissions";
-        $result=mysqli_query($this->con, $sql);
-        return $result;
+    public function displayprojectdetails($search=""){
+        if($search){
+        $sql =
+        "SELECT * FROM Submissions
+        WHERE project_title
+        LIKE '%$search%'";
+        }
+    else{
+        $sql =
+        "SELECT * FROM Submissions";
+    }
+    return mysqli_query($this->con,$sql);
     }
     public function displayprojectnumber(){
-        $sql = "SELECT COUNT(*) FROM Submissions";
+        $sql = "SELECT COUNT(*) AS total FROM Submissions";
+        return mysqli_query($this->con, $sql);
     }
 }
 ?>
