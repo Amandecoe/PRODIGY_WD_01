@@ -24,10 +24,6 @@
     ?>
         </p>
         <p>
-            Student ID:
-            <?php echo $project['Student_id']; ?>
-        </p>
-        <p>
             Project Description:
             <?php echo $project['project_description'] ?>
         </p>
