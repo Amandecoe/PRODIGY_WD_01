@@ -28,10 +28,10 @@
             <?php echo $project['file_path']; ?>
         </p>
         <div id="link">
-        <a href="../<?php echo $project['file_path']; ?>" download>
+        <a class="btn" href="../<?php echo $project['file_path']; ?>" download>
             Download
         </a>
-        <a href="">Grade</a>
+        <a class="btn" href="">Grade</a>
         </div>
     </div>
 <?php } ?>
