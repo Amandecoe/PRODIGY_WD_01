@@ -35,7 +35,7 @@
         <div class="project-card">
         <h3>
             Project Title:
-            <?php echo $project['project_title']; ?>
+            <?php echo $project['project_title'];  ?>
         </h3>
         <p>
             Student:
@@ -52,7 +52,7 @@
             <?php echo $project['file_path']; ?>
         </p>
         <div id="link">
-        <a class="btn" href="../<?php echo $project['file_path']; ?>" download>
+        <a class="btn" href="/Proj_Sub/<?php echo $project['file_path']; ?>" download>
             Download
         </a>
         <a class="btn" href="">Grade</a>

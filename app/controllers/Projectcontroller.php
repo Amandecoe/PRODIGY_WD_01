@@ -16,13 +16,14 @@ class Projectcontroller{
             $student_id = $_SESSION['id'];
             $file_name = $_FILES['project-file']['name'];
             $tmp_name = $_FILES['project-file']['tmp_name'];
-            $folder = "../uploads/".$file_name;
+            $server_path = "../uploads/".$file_name;   
+            $db_path = "uploads/".$file_name;
             $project_description = $_POST['project-description'];
-            if(move_uploaded_file($tmp_name, $folder)){
+            if(move_uploaded_file($tmp_name, $server_path)){
 
                 $this->projectModel->saveprojectdetails(
                     $title,
-                    $folder,
+                    $db_path,
                     $student_id,
                     $file_name,
                     $project_description,

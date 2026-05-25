@@ -28,5 +28,8 @@ class Project{
         $sql = "SELECT COUNT(*) AS total FROM Submissions";
         return mysqli_query($this->con, $sql);
     }
+    public function totalprojectsbylec(){
+        
+    }
 }
 ?>
