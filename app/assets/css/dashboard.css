@@ -82,9 +82,9 @@ p{
     height:35px;
 }
 .search input{
-    border-radius: 5px;
-    width:300px;
-    height:30px;
+    border-radius: 10px;
+    width:400px;
+    height:40px;
     padding:10px;
 }
 .submit{
@@ -93,4 +93,7 @@ p{
     color:white;
     background-color: black;
     padding:8px 14px;
+}
+.top-container{
+    display: flex;
 }

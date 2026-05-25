@@ -7,17 +7,20 @@
         <h1>Dashboard</h1>
         <h3>Welcome <?php echo $Lecturer['Name']?></h3>
         </div>
-        <div id = "assign-project">
-
-        </div>
         <div class="Projects">
             <h2>Projects</h2>
-
+            <div class="top-container">
+        <div>
         <form class="search" method="GET">
         <input type="text" name="search" placeholder="Search projects...">
         <button class="submit" type="submit">Search</button>
         <a href="" class="clear-btn">Clear</a>
         </form>
+        </div>
+        <div id="assign-project">
+            <a class="clear-btn">Assign Project</a>
+        </div>
+        </div>
         <?php while($project = mysqli_fetch_assoc($projects) ) { ?>
         <div class="project-card">
         <h3>
