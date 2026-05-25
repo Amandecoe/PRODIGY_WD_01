@@ -28,8 +28,9 @@ p{
     display:flex;
     flex-direction: column;
     gap:10px;
+    border:0.6px solid rgba(138, 134, 134, 0.341);
 }
 .project-card{
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
 }

@@ -24,17 +24,13 @@
         ?>
         </p>
         <p>
-            Project Description:
-            <?php echo $project['project_description'] ?>
-        </p>
-        <p>
             Uploaded File:
             <?php echo $project['file_path']; ?>
         </p>
         <a href="../<?php echo $project['file_path']; ?>" download>
             Download
         </a>
-        <a>Grade</a>
+        <a href="">Grade</a>
     </div>
 <?php } ?>
 </div>
