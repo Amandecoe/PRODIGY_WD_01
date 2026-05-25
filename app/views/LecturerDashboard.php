@@ -21,7 +21,7 @@
             $project['Student_id']
             );
             echo $student['Name'];
-    ?>
+        ?>
         </p>
         <p>
             Project Description:
