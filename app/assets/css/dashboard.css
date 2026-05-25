@@ -31,6 +31,7 @@ p{
     border:0.6px solid rgba(138, 134, 134, 0.341);
     border-radius: 25px;
     padding: 30px;
+    margin:20px;
 }
 .project-card{
     display: flex;
@@ -39,4 +40,7 @@ p{
     height:200px;
     border-radius: 25px;
     padding:20px;
+}
+.project-card p{
+    font-weight: 300;
 }
