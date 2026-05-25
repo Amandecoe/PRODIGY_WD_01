@@ -3,13 +3,20 @@
         <link rel="stylesheet" href="../assets/css/dashboard.css"/>
     </head>
     <body>
+        <div class="top-title">
         <h1>Dashboard</h1>
         <h3>Welcome <?php echo $Lecturer['Name']?></h3>
+        </div>
         <div id = "assign-project">
-            
+
         </div>
         <div class="Projects">
             <h2>Projects</h2>
+
+        <form method="GET">
+        <input type="text" name="search" placeholder="Search projects...">
+        <button type="submit">Search</button>
+        </form>
         <?php while($project = mysqli_fetch_assoc($projects) ) { ?>
         <div class="project-card">
         <h3>
