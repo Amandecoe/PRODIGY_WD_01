@@ -45,7 +45,11 @@ class Projectcontroller{
     public function assignproject(){
         if($_SERVER['REQUEST_METHOD']=='POST'){
             $lecturer_id = $_SESSION['id'];
-            $description = $_POST[''];
+            $description = $_POST['project_description'];
+            $department = $_POST['Department'];
+            $title = $_POST['project_title'];
+            $year = $_POST['year'];
+            $semester = $_POST['Semester'];
         }
     }
 
