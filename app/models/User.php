@@ -70,7 +70,7 @@ class User{
     return mysqli_fetch_assoc($result);
     }
     public function totalstudentsnumber(){
-        
+        $sql = "";
     }
 }
 ?>
