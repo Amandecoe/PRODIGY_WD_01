@@ -51,6 +51,9 @@ class Projectcontroller{
             $year = $_POST['year'];
             $semester = $_POST['Semester'];
         }
+        $this->projectModel->assignprojects($lecturer_id,$description,$department,$year,$semester,$title);
+        header("Location: ../controllers/DashboardController.php");
+        exit();
     }
 
     }
