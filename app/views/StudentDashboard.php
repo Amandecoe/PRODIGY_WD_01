@@ -8,9 +8,11 @@
         <div id = "top-section">
         <div id = "top-cards">
         <h3>Total Projects</h3>
+        <h1>10</h1>
         </div>
         <div id = "top-cards">
         <h3>Average Grade</h3>
+        <h1>A</h1>
         </div>
         </div>
         <div id = "Projects">
@@ -20,7 +22,7 @@
                 <?php ?>
                 </h3>
                 <p>
-                
+
                 </p>
             </div>
         </div>
