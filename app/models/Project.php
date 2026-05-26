@@ -30,8 +30,9 @@ class Project{
         $num_rows = mysqli_fetch_row($result);
         return $num_rows[0];
     }
-    public function totalprojectsbylec(){
 
+    public function assignprojects(){
+        
     }
 }
 ?>
