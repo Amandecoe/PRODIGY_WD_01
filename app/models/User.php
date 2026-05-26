@@ -73,7 +73,7 @@ class User{
         $sql = "SELECT COUNT(*) FROM Student";
         $result = mysqli_query($this->con, $sql);
         $num_rows=mysqli_fetch_row($result); //because it returns one row and one column(the number of rows)
-        return $num_rows;
+        return $num_rows[0];
     }
 }
 ?>
