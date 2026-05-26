@@ -34,7 +34,8 @@ class Project{
     public function assignprojects($lecturer_id,$description,$department,$year,$semester,$title){
         $sql="INSERT INTO projects(lecturer_id,description,target_dept,target_year,target_sem,project_title)
         VALUES('$lecturer_id','$description', '$department', '$year', '$semester','$title')";
-        mysqli_query($this->con, $sql);
+        $result=mysqli_query($this->con, $sql);
+        return $result;
     }
 }
 ?>

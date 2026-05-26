@@ -37,22 +37,34 @@ class Projectcontroller{
         }
         }
     public function assignproject(){
+
         if($_SERVER['REQUEST_METHOD']=='POST'){
+
             $lecturer_id = $_SESSION['id'];
             $description = $_POST['project_description'];
             $department = $_POST['Department'];
             $title = $_POST['project_title'];
             $year = $_POST['year'];
             $semester = $_POST['Semester'];
+
+            $result = $this->projectModel->assignprojects(
+                $lecturer_id,
+                $description,
+                $department,
+                $year,
+                $semester,
+                $title
+            );
+
+            if($result){
+                header("Location: ../controllers/DashboardController.php");
+                exit();
+            } else {
+                echo "Project not assigned";
+            }
         }
-        if($this->projectModel->assignprojects($lecturer_id,$description,$department,$year,$semester,$title)){;
-        header("Location: ../controllers/DashboardController.php");
-        exit();
-        }
-        else{
-            echo "Project not assigned";
-        }
-        }};
+    } 
+}
 
 
 $controller = new Projectcontroller($con);
@@ -60,16 +72,15 @@ $controller = new Projectcontroller($con);
 if(!isset($_SESSION['role'])){
     echo "No session";
     exit();
-}
+};
 
 if($_SESSION['role'] == 'student'){
     $controller->uploadfile();
     exit();
-}
+};
 
 if($_SESSION['role'] == 'lecturer'){
     $controller->assignproject();
     exit();
-}
-
+};
 ?>
