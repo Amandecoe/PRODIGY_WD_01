@@ -32,7 +32,8 @@ class Project{
     }
 
     public function assignprojects(){
-        
+        $sql="INSERT INTO projects(lecturer_id,description,target_dept,target_year,target_sem,project_title)
+        VALUES()";
     }
 }
 ?>

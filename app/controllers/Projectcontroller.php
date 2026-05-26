@@ -42,7 +42,12 @@ class Projectcontroller{
         }
         return false;
     }
-    
+    public function assignproject(){
+        if($_SERVER['REQUEST_METHOD']=='POST'){
+            $lecturer_id = $_SESSION['id'];
+            $description = $_POST[''];
+        }
+    }
 
     }
 
