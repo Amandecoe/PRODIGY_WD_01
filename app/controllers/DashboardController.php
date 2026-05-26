@@ -17,6 +17,7 @@ if($_SESSION['role'] == 'lecturer'){
     $search = $_GET['search'] ?? "";
     $projects = $projectModel->displayprojectdetails($search);
     $total_students = $userModel->totalstudentsnumber();
+    $total_submissions = $projectModel->displayprojectnumber();
     include "../views/LecturerDashboard.php";
     exit();
 }

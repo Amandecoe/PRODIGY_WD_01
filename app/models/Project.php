@@ -25,11 +25,13 @@ class Project{
     return mysqli_query($this->con,$sql);
     }
     public function displayprojectnumber(){
-        $sql = "SELECT COUNT(*) AS total FROM Submissions";
-        return mysqli_query($this->con, $sql);
+        $sql = "SELECT COUNT(*) FROM Submissions";
+        $result=mysqli_query($this->con, $sql);
+        $num_rows = mysqli_fetch_row($result);
+        return $num_rows[0];
     }
     public function totalprojectsbylec(){
-        
+
     }
 }
 ?>

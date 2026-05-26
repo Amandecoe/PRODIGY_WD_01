@@ -10,7 +10,7 @@
         <div id="top-section">
             <div id="top-cards">
             <h3>Total Submissions</h3>
-            <h1></h1>
+            <h1><?php echo $total_submissions?></h1>
             </div>
             <div id="top-cards">
             <h3>Total Students</h3>
