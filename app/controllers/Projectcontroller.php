@@ -51,12 +51,15 @@ class Projectcontroller{
             $year = $_POST['year'];
             $semester = $_POST['Semester'];
         }
-        $this->projectModel->assignprojects($lecturer_id,$description,$department,$year,$semester,$title);
+        if($this->projectModel->assignprojects($lecturer_id,$description,$department,$year,$semester,$title)){;
         header("Location: ../controllers/DashboardController.php");
         exit();
-    }
+        }
+        else{
+            echo "Project not assigned";
+        }
+        }};
 
-    }
 
 $controller = new Projectcontroller($con);
 
