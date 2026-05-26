@@ -36,12 +36,6 @@ class Projectcontroller{
             }
         }
         }
-    public function displayallproject(){
-        if(isset($_SESSION['id'])){
-            return $this->projectModel->displayprojectdetails();
-        }
-        return false;
-    }
     public function assignproject(){
         if($_SERVER['REQUEST_METHOD']=='POST'){
             $lecturer_id = $_SESSION['id'];
@@ -66,21 +60,16 @@ $controller = new Projectcontroller($con);
 if(!isset($_SESSION['role'])){
     echo "No session";
     exit();
-    }
+}
 
-    if($_SESSION['role'] == 'student'){
-        $controller->uploadfile();
-        include "../views/StudentDashboard.php";
-        exit();
-    }
+if($_SESSION['role'] == 'student'){
+    $controller->uploadfile();
+    exit();
+}
 
-    elseif($_SESSION['role'] == 'lecturer'){
-        $projects = $controller->displayallproject();
-        include "../views/LecturerDashboard.php";
-        exit();
-    }
-else{
-    echo "No session found";
+if($_SESSION['role'] == 'lecturer'){
+    $controller->assignproject();
+    exit();
 }
 
 ?>

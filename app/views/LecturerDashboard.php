@@ -10,7 +10,7 @@
         <div id="top-section">
             <div id="top-cards">
             <h3>Total Submissions</h3>
-            <h1><?php echo $total_submissions?></h1>
+            <h1><?php echo $total_submissions;?></h1>
             </div>
             <div id="top-cards">
             <h3>Total Students</h3>
@@ -28,7 +28,7 @@
         </form>
         </div>
         <div id="assign-project">
-            <a class="assign-btn">Assign Project +</a>
+            <a href="../views/assign_project.php" class="assign-btn">Assign Project +</a>
         </div>
         </div>
         <?php while($project = mysqli_fetch_assoc($projects) ) { ?>
