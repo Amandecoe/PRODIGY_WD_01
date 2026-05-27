@@ -11,7 +11,12 @@ p{
     font-family: 'Lato';
 }
 .top-title{
-    
+    display:grid;
+    grid-template-columns: 1fr 1fr;
+}
+.profile_info{
+    justify-items: end;
+    padding-right:20px;
 }
 #top-section{
     display:flex;
