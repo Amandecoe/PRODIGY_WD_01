@@ -20,6 +20,7 @@ p{
     display:flex;
     flex-direction: column;
     gap:-50px;
+    color:rgb(106, 105, 105);
 }
 .profile_info{
     display:flex;
