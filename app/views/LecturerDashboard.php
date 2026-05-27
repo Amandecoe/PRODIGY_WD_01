@@ -64,7 +64,7 @@
         <a class="btn" href="/Proj_Sub/<?php echo $project['file_path']; ?>" download>
             Download
         </a>
-        <a class="btn" href="">Grade</a>
+        <a class="btn" href="../views/gradeprojects.php">Grade</a>
         </div>
     </div>
 <?php } ?>
