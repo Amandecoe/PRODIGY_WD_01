@@ -4,8 +4,14 @@
     </head>
     <body>
         <div class="top-title">
+            <div class = "title">
         <h1>Dashboard</h1>
         <p>Manage your Student's Projects and Grade them</p>
+            </div>
+            <div class="profile_info">
+        <p><?php echo $Lecturer['Name']?></p>
+        <p><?php echo $Lecturer['Email']?></p>
+            </div>
         </div>
         <div id="top-section">
             <div id="top-cards">
