@@ -44,8 +44,10 @@ class Project{
         $result = mysqli_query($this->con, $sql);
         return $result;
     }
-    public function displaygrade(){
-        $sql = "";
+    public function displaygrade($student_id){
+        $sql = "SELECT grade, feedback, graded_by, graded_at FROM Submissions
+        WHERE Student_id = '$student_id'";
+        return mysqli_query($this->con, $sql);
     }
 }
 ?>

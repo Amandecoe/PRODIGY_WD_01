@@ -23,8 +23,9 @@ if($_SESSION['role'] == 'lecturer'){
 }
 
 if($_SESSION['role'] == 'student'){
-
-    $Student = $userModel->getstudentbyid($_SESSION['id']);
+    $student_id = $_SESSION['id'];
+    $Student = $userModel->getstudentbyid($student_id);
+    $grade = $projectModel->displaygrade($student_id);
     include "../views/StudentDashboard.php";
     exit();
 }
