@@ -25,7 +25,6 @@ if($_SESSION['role'] == 'lecturer'){
 if($_SESSION['role'] == 'student'){
 
     $Student = $userModel->getstudentbyid($_SESSION['id']);
-
     include "../views/StudentDashboard.php";
     exit();
 }

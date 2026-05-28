@@ -44,5 +44,8 @@ class Project{
         $result = mysqli_query($this->con, $sql);
         return $result;
     }
+    public function displaygrade(){
+        $sql = "";
+    }
 }
 ?>
