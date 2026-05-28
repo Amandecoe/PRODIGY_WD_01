@@ -16,6 +16,11 @@
         </div>
         </div>
         <div id = "Projects">
+            <h2>Projects</h2>
+            <div class="choice-button">
+                <button>Due Projects</button>
+                <button>Submitted Projects</button>
+            </div>
             <div id="Submitted-proj">
             <div class="project-card">
                 <h3>
