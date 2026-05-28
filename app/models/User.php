@@ -69,12 +69,6 @@ class User{
     $result = mysqli_query($this->con,$sql);
     return mysqli_fetch_assoc($result);
     }
-    public function getLecturerbyGrading($lecturer_id){
-        $sql = "SELECT * FROM Lecturer
-        WHERE id='$lecturer_id'";
-        $result = mysqli_query($this->con, $sql);
-        return mysqli_fetch_assoc($result);
-    }
     public function totalstudentsnumber(){
         $sql = "SELECT COUNT(*) FROM Student";
         $result = mysqli_query($this->con, $sql);
