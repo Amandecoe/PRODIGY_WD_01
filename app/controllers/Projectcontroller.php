@@ -62,11 +62,11 @@ class Projectcontroller{
     }
     public function gradestudent(){
         if($_SERVER['REQUEST_METHOD']=='POST'){
-            $Name = $_POST['lecturer_name'];
             $Grade = $_POST['grade'];
             $feedback = $_POST['feedback'];
+            $lecturer_id = $_SESSION['id'];
 
-            
+
         }
     }
 }

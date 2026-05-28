@@ -38,8 +38,11 @@ class Project{
         return $result;
     }
 
-    public function uploadgrade($Name, $Grade, $feedback){
-        $sql = "INSERT into Submissions()"
+    public function uploadgrade($Grade, $feedback, $lecturer_id){
+        $sql = "INSERT into Submissions(grade, feedback, graded_by)
+        VALUES('$Grade', '$feedback', '$lecturer_id' )";
+        $result = mysqli_query($this->con, $sql);
+        return $result;
     }
 }
 ?>
