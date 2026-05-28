@@ -66,6 +66,14 @@ class Projectcontroller{
             $feedback = $_POST['feedback'];
             $lecturer_id = $_SESSION['id'];
 
+            $result = $this->projectModel->uploadgrade($Grade,$feedback,$lecturer_id);
+            if($result){
+                header("Location: ../controllers/DashboardController.php");
+                exit();
+            }
+            else{
+                echo "Grade not submitted";
+            }
 
         }
     }
