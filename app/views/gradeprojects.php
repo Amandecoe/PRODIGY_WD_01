@@ -1,6 +1,6 @@
 <html>
     <body>
-        <form>
+        <form method="post">
             <label>Lecturer Name</label>
             <input type = "text" name="lecturer_name" required>
             <label>Grade</label>

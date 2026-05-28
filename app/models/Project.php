@@ -37,5 +37,9 @@ class Project{
         $result=mysqli_query($this->con, $sql);
         return $result;
     }
+
+    public function uploadgrade($Name, $Grade, $feedback){
+        $sql = "INSERT into Submissions()"
+    }
 }
 ?>
