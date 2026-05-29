@@ -72,7 +72,6 @@ class Projectcontroller{
             else{
                 echo "Grade not submitted";
             }
-
         }
     }
 }
