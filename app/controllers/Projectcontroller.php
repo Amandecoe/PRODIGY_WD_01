@@ -91,7 +91,10 @@ if($_SESSION['role'] == 'student'){
 };
 
 if($_SESSION['role'] == 'lecturer'){
-    $controller->assignproject();
+    if(isset($_POST['assign'])){
+        $controller->assignproject();
+        exit();
+    }
     $controller->gradestudent();
     exit();
 };

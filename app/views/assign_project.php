@@ -21,7 +21,7 @@
         <option value = "2">2</option>
         <option value = "3">3</option>
         </select>
-        <button type="submit" name = "upload">Assign Project</button>
+        <button type="submit" name = "assign">Assign Project</button>
         </form>
     </body>
 </html>
