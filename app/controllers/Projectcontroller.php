@@ -38,10 +38,10 @@ class Projectcontroller{
         if($_SERVER['REQUEST_METHOD']=='POST'){
             $lecturer_id = $_SESSION['id'];
             $description = $_POST['project_description'];
-            $department = $_POST['target_dept'];
+            $department = $_POST['Department'];
             $title = $_POST['project_title'];
-            $year = $_POST['target_year'];
-            $semester = $_POST['target_sem'];
+            $year = $_POST['year'];
+            $semester = $_POST['Semester'];
             $result = $this->projectModel->assignprojects(
                 $lecturer_id,
                 $description,
