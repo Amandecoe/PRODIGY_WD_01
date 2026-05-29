@@ -20,7 +20,6 @@ class Projectcontroller{
             $db_path = "uploads/".$file_name;
             $project_description = $_POST['project-description'];
             if(move_uploaded_file($tmp_name, $server_path)){
-
                 $this->projectModel->saveprojectdetails(
                     $title,
                     $db_path,
@@ -30,7 +29,6 @@ class Projectcontroller{
                 );
                 header("Location: ../controllers/DashboardController.php");
                 exit();
-
             } else {
                 echo "File upload failed";
             }
