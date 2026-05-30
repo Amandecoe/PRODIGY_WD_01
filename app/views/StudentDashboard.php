@@ -24,8 +24,9 @@
             <div id="Submitted-proj">
             <div class="project-card">
                 <h3>
-                
-                <?php ?>
+                <?php   while($row = mysqli_fetch_assoc($project)){
+                echo $row['project_title'];
+                }?>
                 </h3>
                 <p>
 

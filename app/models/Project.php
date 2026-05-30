@@ -53,7 +53,7 @@ class Project{
         if($search){
         $sql = "SELECT * FROM projects
         WHERE project_title
-        LIKE '%search%'";
+        LIKE '%$search%'";
         }
         else{
             $sql = "SELECT * FROM projects";
