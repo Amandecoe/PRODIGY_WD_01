@@ -50,7 +50,9 @@ class Project{
         return mysqli_query($this->con, $sql);
     }
     public function displayassignedprojects($search = ""){
+        if($search){
         $sql = "";
+        }
     }
 }
 ?>
