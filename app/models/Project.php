@@ -51,7 +51,12 @@ class Project{
     }
     public function displayassignedprojects($search = ""){
         if($search){
-        $sql = "";
+        $sql = "SELECT * FROM projects
+        WHERE project_title
+        LIKE '%search%'";
+        }
+        else{
+            $sql = "SELECT * FROM projects";
         }
     }
 }
