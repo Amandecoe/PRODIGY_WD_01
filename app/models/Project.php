@@ -58,6 +58,7 @@ class Project{
         else{
             $sql = "SELECT * FROM projects";
         }
+        return mysqli_query($this->con, $sql);
     }
 }
 ?>
