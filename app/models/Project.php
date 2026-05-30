@@ -49,7 +49,7 @@ class Project{
         WHERE Student_id = '$student_id'";
         return mysqli_query($this->con, $sql);
     }
-    public function displayassignedprojects(){
+    public function displayassignedprojects($search = ""){
         $sql = "";
     }
 }
