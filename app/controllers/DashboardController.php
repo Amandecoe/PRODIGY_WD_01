@@ -25,7 +25,7 @@ if($_SESSION['role'] == 'lecturer'){
 if($_SESSION['role'] == 'student'){
     $student_id = $_SESSION['id'];
     $Student = $userModel->getstudentbyid($_SESSION['id']);
-    $project = $projectModel->displayassignedprojects($search);
+    $project = $projectModel->displayassignedprojects($search); //this stores it as an array
     $grade = $projectModel->displaygrade($student_id);
     include "../views/StudentDashboard.php";
     exit();
