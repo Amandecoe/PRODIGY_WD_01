@@ -44,4 +44,3 @@
     </body>
     <script src="../assets/js/script.js"defer></script>
 </html>
-
