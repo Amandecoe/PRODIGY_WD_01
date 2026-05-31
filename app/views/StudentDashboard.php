@@ -33,7 +33,6 @@
             </div>
         </div>
         <div id = "Due-projects">
-
         </div>
         </div>
         <a href="/Proj_Sub/app/views/submit_project.php">Upload Project</a>
