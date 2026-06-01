@@ -26,7 +26,6 @@ class User{
             }
             return false;
 }
-
     public function loginstudents($Email,$password){
         $sql = "SELECT * FROM STUDENT WHERE Email = '$Email'
             AND password = '$password'";
