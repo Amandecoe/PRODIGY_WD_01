@@ -35,7 +35,6 @@ class User{
             if(!$result){
                 return false;
                 }
-
             if(mysqli_num_rows($result)>0){
                     $user = mysqli_fetch_assoc($result);
                     return $user;
