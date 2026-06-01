@@ -17,9 +17,13 @@
         </div>
         <div id = "Projects">
             <h2>Projects</h2>
-            
+
             <div id="Submitted-proj">
             <div class="project-card">
+            <div class="choice-button">
+                <button id="Due">Due Projects</button>
+                <button id="Submitted">Submitted Projects</button>
+            </div>
                 <h3>
                 <?php   while($row = mysqli_fetch_assoc($project)){
                 echo $row['project_title'];
