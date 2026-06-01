@@ -20,7 +20,6 @@ class User{
     public function registerstudent($FullName, $Email, $Department, $Year, $Semester, $password, $StudentID){
         $sql = "INSERT INTO Student(Name,Email,Department,Year, Semester, password, Student_iD)
             VALUES('$FullName', '$Email', '$Department','$Year','$Semester','$password','$StudentID')";
-
             $result=mysqli_query($this->con, $sql);
             if($result){
                 return true;
