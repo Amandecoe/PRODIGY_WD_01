@@ -17,10 +17,7 @@
         </div>
         <div id = "Projects">
             <h2>Projects</h2>
-            <div class="choice-button">
-                <button id="Due">Due Projects</button>
-                <button id="Submitted">Submitted Projects</button>
-            </div>
+            
             <div id="Submitted-proj">
             <div class="project-card">
                 <h3>
