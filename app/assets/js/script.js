@@ -12,8 +12,6 @@ lecturer.style.display = "none";
 studentchoicebutton.classList.add("active");
 lecturerchoicebutton.classList.remove("active");
 
-Dueproject.classList.add("active");
-Submitted.classList.remove("active");
 
 function choice(){
     studentchoicebutton.addEventListener("click", () => {
