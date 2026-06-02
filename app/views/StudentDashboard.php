@@ -38,5 +38,5 @@
         </div>
         <a href="/Proj_Sub/app/views/submit_project.php">Upload Project</a>
     </body>
-    <script></script>
+    <script src="../assets/js/script.js"defer></script>
 </html>
