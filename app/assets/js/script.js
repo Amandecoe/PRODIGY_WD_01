@@ -4,6 +4,7 @@ let lecturer = document.getElementById("Lecturer");
 let studentchoicebutton = document.getElementById("Student-choice");
 let lecturerchoicebutton = document.getElementById("Lecturer-choice");
 let Dueproject = document.getElementById("Due");
+let Submitted = document.getElementById("Submitted");
 
 student.style.display = "inline"; //default when the pages load
 lecturer.style.display = "none";
