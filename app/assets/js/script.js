@@ -27,6 +27,9 @@ function choice(){
         lecturerchoicebutton.classList.add("active");
             studentchoicebutton.classList.remove("active");
     })};
+function proj(){
+    
+}
 choice();
 });
 
