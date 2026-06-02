@@ -12,6 +12,9 @@ lecturer.style.display = "none";
 studentchoicebutton.classList.add("active");
 lecturerchoicebutton.classList.remove("active");
 
+Dueproject.classList.add("active");
+Submitted.classList.remove("active");
+
 function choice(){
     studentchoicebutton.addEventListener("click", () => {
         student.style.display = "inline";
@@ -27,6 +30,7 @@ function choice(){
         lecturerchoicebutton.classList.add("active");
             studentchoicebutton.classList.remove("active");
     })};
+
 function proj(){
     Dueproject.addEventListener("click", () => {
         Dueproject.classList.add("active");
@@ -39,5 +43,6 @@ function proj(){
     })
 }
 choice();
+proj();
 });
 
