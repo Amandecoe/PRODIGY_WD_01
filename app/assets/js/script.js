@@ -28,6 +28,11 @@ function choice(){
             studentchoicebutton.classList.remove("active");
     })};
 function proj(){
+    Dueproject.addEventListener("click", () => {
+        Dueproject.classList.add("active");
+        Dueproject.classList.remove("active");
+    })
+
     
 }
 choice();
