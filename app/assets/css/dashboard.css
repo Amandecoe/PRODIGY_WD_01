@@ -146,3 +146,15 @@ p{
     border-radius:30px;
     background-color: rgb(0, 0, 0);
 }
+#Due{
+    width:100px;
+    height:40px;
+    border-radius: 15px;
+    border: 1px solid black;
+}
+#Submitted{
+    width:100px;
+    height:40px;
+    border-radius: 15px;
+    border: 1px solid rgb(0, 0, 0);
+}
