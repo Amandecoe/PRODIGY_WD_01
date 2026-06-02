@@ -33,7 +33,10 @@ function proj(){
         Dueproject.classList.remove("active");
     })
 
-    
+    Submitted.addEventListener("click", () =>{
+        Submitted.classList.add("active");
+        Submitted.classList.remove("active");
+    })
 }
 choice();
 });
