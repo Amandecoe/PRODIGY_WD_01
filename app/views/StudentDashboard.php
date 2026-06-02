@@ -17,7 +17,6 @@
         </div>
         <div id = "Projects">
             <h2>Projects</h2>
-
             <div id="Submitted-proj">
             <div class="project-card">
             <div class="choice-button">
