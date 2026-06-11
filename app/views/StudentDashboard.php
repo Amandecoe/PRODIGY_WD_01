@@ -31,7 +31,10 @@
                         <?php echo $row['project_title']; ?>
                     </h3>
                     <p>
-                        
+                        Lecturer:
+                        <?php
+                        $Lecturer->getLectu
+                        ?>
                     </p>
                 </div>
                 <?php  }?>

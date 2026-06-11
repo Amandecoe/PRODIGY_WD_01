@@ -71,5 +71,11 @@ class User{
         $num_rows=mysqli_fetch_row($result); //because it returns one row and one column(the number of rows)
         return $num_rows[0];
     }
+    public function getlecturerbyassignment($lecturer_id){
+        $sql = "SELECT * FROM Lecturer
+                WHERE id='$lecturer_id'";
+        $result = mysqli_query($this->con, $sql);
+        return mysqli_fetch_assoc($result);
+    }
 }
 ?>
