@@ -37,7 +37,8 @@
                         ?>
                     </p>
                     <p>
-                        
+                        Project Description:
+                        <?php echo $row['description']; ?>
                     </p>
                     <a class="upload" href="/Proj_Sub/app/views/submit_project.php">Upload Project</a>
                 </div>
