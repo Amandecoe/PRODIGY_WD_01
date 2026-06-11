@@ -28,8 +28,11 @@
                 <div class="project-card">
                     <h3>
                         Project Title:
-                        <?php echo $row['project-title']; ?>
+                        <?php echo $row['project_title']; ?>
                     </h3>
+                    <p>
+                        
+                    </p>
                 </div>
                 <?php  }?>
                 </h3>
