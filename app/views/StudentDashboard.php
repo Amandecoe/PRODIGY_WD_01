@@ -24,9 +24,15 @@
                 <button id="Submitted">Submitted Projects</button>
             </div>
                 <h3>
-                <?php   while($row = mysqli_fetch_assoc($project)){
+                <?php   while($row = mysqli_fetch_assoc($project)){ ?>
                 echo $row['project_title'];
-                }?>
+                <div class="project-card">
+                    <h3>
+                        Project Title:
+                        <?php echo $row['project-title']; ?>
+                    </h3>
+                </div>
+               <?php  }?>
                 </h3>
                 <p>
                 </p>
