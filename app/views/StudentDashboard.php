@@ -40,7 +40,7 @@
                         Project Description:
                         <?php echo $row['description']; ?>
                     </p>
-                    <a class="upload" href="/Proj_Sub/app/views/submit_project.php">Upload Project</a>
+                    <button class="upload"><a  href="/Proj_Sub/app/views/submit_project.php">Upload Project</a></button>
                 </div>
                 <?php  }?>
                 </h3>
