@@ -162,3 +162,12 @@ p{
     background-color: black;
     color:white;
 }
+.upload{
+    background-color: black;
+    color: white;
+    padding:8px 14px;
+    border-radius: 10px;
+    cursor: pointer;
+    text-decoration: none;
+    width:200px;
+}

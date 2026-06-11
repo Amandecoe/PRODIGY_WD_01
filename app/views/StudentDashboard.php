@@ -36,6 +36,10 @@
                         echo $Lecturer['Name'];
                         ?>
                     </p>
+                    <p>
+                        
+                    </p>
+                    <a class="upload" href="/Proj_Sub/app/views/submit_project.php">Upload Project</a>
                 </div>
                 <?php  }?>
                 </h3>
