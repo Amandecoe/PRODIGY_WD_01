@@ -33,7 +33,7 @@
                     <p>
                         Lecturer:
                         <?php
-                        echo $Student['Name'];
+                        echo $Lecturer['Name'];
                         ?>
                     </p>
                 </div>
