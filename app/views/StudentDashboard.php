@@ -33,7 +33,7 @@
                     <p>
                         Lecturer:
                         <?php
-                        $Lecturer->getLectu
+                        echo $Student['Name'];
                         ?>
                     </p>
                 </div>
