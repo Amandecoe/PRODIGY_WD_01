@@ -169,5 +169,6 @@ p{
     border-radius: 10px;
     cursor: pointer;
     text-decoration: none;
-    width:200px;
+    width:180px;
+    align-items: center;
 }
