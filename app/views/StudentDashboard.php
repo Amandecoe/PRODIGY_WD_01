@@ -3,20 +3,18 @@
         <link rel="stylesheet" href="../assets/css/dashboard.css"/>
     </head>
     <body>
+        <div class="top-title">
         <h1>Dashboard</h1>
-        <p>Welcome <?php echo $user['Name']?></p>
+        </div>
         <div id = "top-section">
         <div id = "top-cards">
         <h3>Total Projects</h3>
         <h1>10</h1>
         </div>
-        <div id = "top-cards">
-        <h3>Average Grade</h3>
-        <h1>A</h1>
         </div>
         </div>
         <div id = "Projects">
-            <h2>Projects</h2>
+            <h2 style="padding:30px;">Projects</h2>
             <div id="Submitted-proj">
             <div class="project-card">
             <div class="choice-button">
