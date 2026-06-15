@@ -57,16 +57,24 @@
         </p>
         <p>
             Uploaded File:
-            <?php echo $project['file_path']; ?>
+            <?php echo $project['file_path'];
+            ?>
         </p>
         <div id="link">
         <a class="btn" href="/Proj_Sub/<?php echo $project['file_path']; ?>" download>
             Download
         </a>
-        <a class="btn"
+        <?php if (empty($project['grade'])) { ?>
+    <a class="btn"
         href="/Proj_Sub/app/views/gradeprojects.php?submission_id=<?php echo $project['id']; ?>">
         Grade
-        </a>
+    </a>
+    <?php } else { ?>
+    <span style="color:green; font-weight:bold;">
+        Graded
+    </span>
+
+<?php } ?>
         </div>
     </div>
 <?php } ?>

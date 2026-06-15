@@ -13,6 +13,7 @@
         </a>
         <h2>Upload Project</h2>
         <form action="../controllers/Projectcontroller.php"method="post" enctype="multipart/form-data">
+            <input type="hidden" name="project_id" value="<?php echo $project['id']; ?>">
             <label for="title">Project Title</label>
             <input id="title"type="text" name="project-title" required>
             <label for="description">Project Description</label>

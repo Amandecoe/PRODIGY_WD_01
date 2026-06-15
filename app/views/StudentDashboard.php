@@ -21,42 +21,39 @@
         <div id = "Projects">
             <h2 style="padding:30px;">Projects</h2>
             <div id="Submitted-proj">
-            <div class="project-card">
-            <div class="choice-button">
-                <button id="Due">Due Projects</button>
-                <button id="Submitted">Submitted Projects</button>
-            </div>
-                <h3>
-                <?php   while($row = mysqli_fetch_assoc($project)){ ?>
-                <div class="project-card">
-                    <h3>
-                        Project Title:
-                        <?php echo $row['project_title']; ?>
-                    </h3>
-                    <p>
-                        Lecturer:
-                        <?php
-                        echo $Lecturer['Name'];
-                        ?>
-                    </p>
-                    <p>
-                        Project Description:
-                        <?php echo $row['description']; ?>
-                    </p>
-                    <a type="button" class="assign-btn" href="../views/submit_project.php">
-                    Upload Project +
-                    </a>
-                </div>
-                <?php  }?>
-                </h3>
-                <p>
-                </p>
-            </div>
-        </div>
-        <div id = "Due-projects">
-        </div>
-        </div>
-    </body>
+        <?php while($row = mysqli_fetch_assoc($projects)) { ?>
+
+    <div class="project-card">
+
+        <h3>
+            Project Title: <?php echo $row['project_title']; ?>
+        </h3>
+
+        <p>
+            Lecturer: <?php echo $row['lecturer_name'] ?? 'N/A'; ?>
+        </p>
+
+        <p>
+            Description: <?php echo $row['project_description']; ?>
+        </p>
+
+        <!-- STATUS LOGIC ONLY HERE -->
+        <?php if(!empty($row['grade'])) { ?>
+
+            <p style="color:green;">
+                Grade: <?php echo $row['grade']; ?>
+            </p>
+
+        <?php } else { ?>
+
+            <a class="assign-btn"
+            href="../views/submit_project.php?project_id=<?php echo $row['project_id']; ?>">
+                Upload Project +
+            </a>
+        <?php } ?>
+    </div>
+<?php } ?>
+</div>
     <script src="../assets/js/script.js"defer></script>
 </html>
 

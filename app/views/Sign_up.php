@@ -64,7 +64,6 @@
         </form>
         <p id="link"><a href="./login.php">Already has an Account?</a></p>
         </div>
-
         </div>
     </body>
     <script src="../assets/js/script.js"defer></script>

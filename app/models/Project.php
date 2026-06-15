@@ -5,24 +5,26 @@ class Project{
     public function __construct($con){
         $this->con = $con;
     }
-    public function saveprojectdetails($title, $file_path, $student_id, $file_name, $project_description){
-        $sql = "INSERT INTO Submissions(project_title, file_path, Student_id, file_name, project_description)
-        VALUES('$title','$file_path', '$student_id' , '$file_name','$project_description')";
-        mysqli_query($this->con, $sql);
+    public function saveprojectdetails($project_id, $title,$student_id, $file_path, $file_name, $project_description){
+    $sql = "INSERT INTO Submissions
+            (project_id, title,student_id, file_path, file_name, project_description)
+            VALUES
+            ('$project_id', '$title','$student_id', '$file_path', '$file_name', '$project_description')";
+    return mysqli_query($this->con, $sql);
     }
-    public function displayprojectdetails($search=""){
-        if($search){
-        $sql =
-        "SELECT * FROM Submissions
-        WHERE project_title
-        LIKE '%$search%'";
-        }
-    else{
-        $sql =
-        "SELECT * FROM Submissions";
+    public function getStudentSubmissions($student_id){
+    $sql = "SELECT * FROM Submissions";
+    return mysqli_query($this->con, $sql);
+}
+    public function displayprojectdetails($search = ""){
+    $sql = "SELECT s.*, p.project_title
+            FROM Submissions s
+            JOIN projects p ON s.project_id = p.id";
+    if($search){
+        $sql .= " WHERE p.project_title LIKE '%$search%'";
     }
-    return mysqli_query($this->con,$sql);
-    }
+    return mysqli_query($this->con, $sql);
+}
     public function displayprojectnumber(){
         $sql = "SELECT COUNT(*) FROM Submissions";
         $result=mysqli_query($this->con, $sql);
@@ -47,8 +49,10 @@ class Project{
     return mysqli_query($this->con, $sql);
 }
     public function displaygrade($student_id){
-        $sql = "SELECT grade, feedback, graded_by, graded_at FROM Submissions
-        WHERE Student_id = '$student_id'";
+        $sql = "SELECT s.grade, s.feedback, s.graded_by, s.graded_at, p.project_title
+        FROM Submissions s
+        JOIN projects p ON s.project_id = p.id
+        WHERE s.student_id = '$student_id'";
         return mysqli_query($this->con, $sql);
     }
     public function displayassignedprojects($search = ""){
