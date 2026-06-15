@@ -5,6 +5,10 @@
     <body>
         <div class="top-title">
         <h1>Dashboard</h1>
+        <a type="button" class="logout-link"
+        href='../controllers/LogoutController.php'">
+        Logout
+</a>
         </div>
         <div id = "top-section">
         <div id = "top-cards">
