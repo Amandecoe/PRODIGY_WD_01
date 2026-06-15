@@ -29,11 +29,6 @@
             <h2>Projects</h2>
             <div class="top-container">
         <div>
-        <form class="search" method="GET">
-        <input type="text" name="search" placeholder="Search projects...">
-        <button class="submit" type="submit">Search</button>
-        <a href="../controllers/DashboardController.php" class="clear-btn">Clear</a>
-        </form>
         </div>
         <div id="assign-project">
             <a href="../views/assign_project.php" class="assign-btn">Assign Project +</a>

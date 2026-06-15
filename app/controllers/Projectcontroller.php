@@ -16,12 +16,17 @@ class Projectcontroller{
             $student_id = $_SESSION['id'];
             $file_name = $_FILES['project-file']['name'];
             $tmp_name = $_FILES['project-file']['tmp_name'];
-            $server_path = "../uploads/".$file_name;
+            $server_path = __DIR__ . "/../../uploads/";
             $project_id = $_POST['project_id'];
             $db_path = "uploads/".$file_name;
             $project_description = $_POST['project-description'];
             if(move_uploaded_file($tmp_name, $server_path)){
-                $this->projectModel->saveprojectdetails($project_id,$title, $student_id, $db_path, $file_name, $project_description);
+                $this->projectModel->saveprojectdetails($project_id,
+                            $title,
+                            $db_path,
+                            $student_id,
+                            $file_name,
+                            $project_description);
                 header("Location: ../controllers/DashboardController.php");
                 exit();
             } else {
