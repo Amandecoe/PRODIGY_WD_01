@@ -2,7 +2,12 @@
 $submission_id = $_GET['submission_id'];
 ?>
 <html>
+    <link rel="stylesheet" href="../assets/css/form.css">
     <body>
+        <div class="form-container">
+        <a href="../controllers/DashboardController.php" class="close-btn">
+            &times;
+        </a>
         <form method="post" action="../controllers/Projectcontroller.php">
             <input type="hidden" name="submission_id"
             value="<?php echo $submission_id; ?>">
@@ -12,7 +17,8 @@ $submission_id = $_GET['submission_id'];
             <input type = "text" name="grade">
             <label>Feedback</label>
             <textarea name="feedback" placeholder="Improve your ..."></textarea>
-            <button type="submit" name="graded">Grade</button>
+            <button type="submit" name="graded" class="submit-btn">Grade</button>
         </form>
+        </div>
     </body>
 </html>

@@ -1,5 +1,10 @@
 <html>
     <body>
+        <div class="form-container">
+        <link rel="stylesheet" href="../assets/css/form.css">
+        <a href="../controllers/DashboardController.php" class="close-btn">
+            &times;
+        </a>
         <form action="../controllers/Projectcontroller.php" method="post" enctype="multipart/form-data">
         <label>Project Title</label>
         <input type="text" name="project_title" required>
@@ -21,7 +26,8 @@
         <option value = "2">2</option>
         <option value = "3">3</option>
         </select>
-        <button type="submit" name = "assign">Assign Project</button>
+        <button type="submit" name = "assign" class="submit-btn">Assign Project</button>
         </form>
+        </div>
     </body>
 </html>
