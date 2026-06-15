@@ -39,9 +39,8 @@
                         <?php echo $row['description']; ?>
                     </p>
                     <button id="openModal" type="button" class="assign-btn">
-                    Assign Project +
+                    Upload Project +
                     </button>
-
                     <div id="modal" class="modal">
                     <div class="modal-content">
                     <span id="closeModal">&times;</span>
@@ -61,3 +60,24 @@
     </body>
     <script src="../assets/js/script.js"defer></script>
 </html>
+<script>
+const modal = document.getElementById("modal");
+
+const openBtn = document.getElementById("openModal");
+
+const closeBtn = document.getElementById("closeModal");
+
+openBtn.addEventListener("click", function() {
+    modal.style.display = "flex";
+});
+
+closeBtn.addEventListener("click", function() {
+    modal.style.display = "none";
+});
+
+window.addEventListener("click", function(e) {
+    if (e.target === modal) {
+        modal.style.display = "none";
+    }
+});
+</script>
