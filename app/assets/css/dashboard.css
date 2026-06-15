@@ -165,7 +165,7 @@ p{
 .assign-btn{
     display: flex;
     width:300px;
-    font-weight: 200;
+    font-weight: 100;
     justify-content: center;
-
+    font-size: medium;
 }
