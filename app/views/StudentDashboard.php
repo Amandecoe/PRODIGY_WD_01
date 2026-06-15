@@ -22,30 +22,18 @@
             <h2 style="padding:30px;">Projects</h2>
             <div id="Submitted-proj">
         <?php while($row = mysqli_fetch_assoc($projects)) { ?>
-
     <div class="project-card">
-
         <h3>
             Project Title: <?php echo $row['project_title']; ?>
         </h3>
-
-        <p>
-            Lecturer: <?php echo $row['lecturer_name'] ?? 'N/A'; ?>
-        </p>
-
         <p>
             Description: <?php echo $row['project_description']; ?>
         </p>
-
-        <!-- STATUS LOGIC ONLY HERE -->
         <?php if(!empty($row['grade'])) { ?>
-
             <p style="color:green;">
                 Grade: <?php echo $row['grade']; ?>
             </p>
-
         <?php } else { ?>
-
             <a class="assign-btn"
             href="../views/submit_project.php?project_id=<?php echo $row['project_id']; ?>">
                 Upload Project +
