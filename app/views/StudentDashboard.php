@@ -9,7 +9,7 @@
         <div id = "top-section">
         <div id = "top-cards">
         <h3>Total Projects</h3>
-        <h1>10</h1>
+        <h1><?php echo $num_proj;?></h1>
         </div>
         </div>
         </div>

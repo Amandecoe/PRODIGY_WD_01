@@ -60,5 +60,11 @@ class Project{
         }
         return mysqli_query($this->con, $sql);
     }
+    public function displayassignedprojectsnumber(){
+        $sql = "SELECT COUNT(*) FROM projects";
+        $result=mysqli_query($this->con, $sql);
+        $num_rows = mysqli_fetch_row($result);
+        return $num_rows[0];
+    }
 }
 ?>
