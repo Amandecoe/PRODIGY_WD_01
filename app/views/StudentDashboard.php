@@ -6,10 +6,11 @@
         <div class="top-title">
         <h1>Dashboard</h1>
         <a type="button" class="logout-link"
-        href='../controllers/LogoutController.php'">
+        href='../controllers/LogoutController.php'>
         Logout
-</a>
+        </a>
         </div>
+        <p style="padding-left:30px; margin-bottom: 10px;">Welcome, Submit your Projects on time for accurate Marks</p>
         <div id = "top-section">
         <div id = "top-cards">
         <h3>Total Projects</h3>

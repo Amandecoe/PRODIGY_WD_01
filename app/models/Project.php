@@ -1,6 +1,5 @@
 <?php
 include "../config/db.php";
-
 class Project{
     private $con;
     public function __construct($con){
@@ -38,12 +37,15 @@ class Project{
         return $result;
     }
 
-    public function uploadgrade($Grade, $feedback, $lecturer_id){
-        $sql = "INSERT into Submissions(grade, feedback, graded_by)
-        VALUES('$Grade', '$feedback', '$lecturer_id' )";
-        $result = mysqli_query($this->con, $sql);
-        return $result;
-    }
+    public function uploadgrade($submission_id, $grade, $feedback, $lecturer_id){
+    $sql = "UPDATE Submissions
+            SET grade='$grade',
+                feedback='$feedback',
+                graded_by='$lecturer_id',
+                graded_at=NOW()
+            WHERE id='$submission_id'";
+    return mysqli_query($this->con, $sql);
+}
     public function displaygrade($student_id){
         $sql = "SELECT grade, feedback, graded_by, graded_at FROM Submissions
         WHERE Student_id = '$student_id'";

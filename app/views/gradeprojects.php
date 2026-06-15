@@ -1,12 +1,17 @@
+<?php
+$submission_id = $_GET['submission_id'];
+?>
 <html>
     <body>
-        <form method="post">
+        <form method="post" action="../controllers/Projectcontroller.php">
+            <input type="hidden" name="submission_id"
+            value="<?php echo $submission_id; ?>">
             <label>Lecturer Name</label>
             <input type = "text" name="lecturer_name" required>
             <label>Grade</label>
-            <input type = "text" name="grade" placeholder="A+, A, A- ...">
+            <input type = "text" name="grade">
             <label>Feedback</label>
-            <input type="textarea" name="feedback" placeholder="Improve your ...">
+            <textarea name="feedback" placeholder="Improve your ..."></textarea>
             <button type="submit" name="graded">Grade</button>
         </form>
     </body>

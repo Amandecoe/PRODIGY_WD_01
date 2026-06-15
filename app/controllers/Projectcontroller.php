@@ -60,11 +60,13 @@ class Projectcontroller{
     }
     public function gradestudent(){
         if($_SERVER['REQUEST_METHOD']=='POST'){
+            var_dump($_POST);
+exit();
+            $submission_id = $_POST['submission_id'];
             $Grade = $_POST['grade'];
             $feedback = $_POST['feedback'];
             $lecturer_id = $_SESSION['id'];
-
-            $result = $this->projectModel->uploadgrade($Grade,$feedback,$lecturer_id);
+            $result = $this->projectModel->uploadgrade($submission_id,$Grade,$feedback,$lecturer_id);
             if($result){
                 header("Location: ../controllers/DashboardController.php");
                 exit();
