@@ -38,7 +38,16 @@
                         Project Description:
                         <?php echo $row['description']; ?>
                     </p>
-                    <button class="modal"><a  href="/Proj_Sub/app/views/submit_project.php">Upload Project</a></button>
+                    <button id="openModal" type="button" class="assign-btn">
+                    Assign Project +
+                    </button>
+
+                    <div id="modal" class="modal">
+                    <div class="modal-content">
+                    <span id="closeModal">&times;</span>
+                    <?php include "submit_project.php"; ?>
+                    </div>
+                    </div>
                 </div>
                 <?php  }?>
                 </h3>
