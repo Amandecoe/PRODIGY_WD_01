@@ -30,15 +30,15 @@
             Description: <?php echo $row['project_description']; ?>
         </p>
         <?php if(!empty($row['grade'])) { ?>
-            <p style="color:green;">
-                Grade: <?php echo $row['grade']; ?>
-            </p>
-        <?php } else { ?>
-            <a class="assign-btn"
-            href="../views/submit_project.php?project_id=<?php echo $row['project_id']; ?>">
-                Upload Project +
-            </a>
-        <?php } ?>
+    <p style="color:green;">
+        Grade: <?php echo $row['grade']; ?>
+    </p>
+    <?php } else { ?>
+    <a class="assign-btn"
+        href="../views/submit_project.php?project_id=<?php echo $row['id']; ?>">
+        Upload Project +
+    </a>
+<?php } ?>
     </div>
 <?php } ?>
 </div>

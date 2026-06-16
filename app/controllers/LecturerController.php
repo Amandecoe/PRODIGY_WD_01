@@ -22,7 +22,7 @@ class Lecturer{
             exit();
         }
         else{
-            echo "Wrong Email or Password, Try Again";
+            echo "Wrong Credentials";
         }
         }
         }

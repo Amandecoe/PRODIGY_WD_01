@@ -1,7 +1,6 @@
 <?php
 include "../config/db.php";
 include "../models/User.php";
-
 class Users{
     private $con;
     private $model;

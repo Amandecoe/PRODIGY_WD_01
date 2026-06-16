@@ -1,6 +1,4 @@
 <?php
-error_reporting(E_ALL);
-ini_set('display_errors', 1);
 include "../config/db.php";
 include "../models/Project.php";
 session_start();
@@ -21,10 +19,11 @@ class Projectcontroller{
             $db_path = "uploads/".$file_name;
             $project_description = $_POST['project-description'];
             if(move_uploaded_file($tmp_name, $server_path)){
-                $this->projectModel->saveprojectdetails($project_id,
+                $this->projectModel->saveprojectdetails(
+                            $project_id,
                             $title,
-                            $db_path,
                             $student_id,
+                            $db_path,
                             $file_name,
                             $project_description);
                 header("Location: ../controllers/DashboardController.php");

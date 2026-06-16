@@ -7,13 +7,13 @@ class Project{
     }
     public function saveprojectdetails($project_id, $title,$student_id, $file_path, $file_name, $project_description){
     $sql = "INSERT INTO Submissions
-            (project_id, title,student_id, file_path, file_name, project_description)
+            (project_id, project_title,student_id, file_path, file_name, project_description)
             VALUES
             ('$project_id', '$title','$student_id', '$file_path', '$file_name', '$project_description')";
     return mysqli_query($this->con, $sql);
     }
     public function getStudentSubmissions($student_id){
-    $sql = "SELECT * FROM Submissions";
+    $sql = "SELECT * FROM Submissions WHERE student_id = '$student_id'";
     return mysqli_query($this->con, $sql);
 }
     public function displayprojectdetails($search = ""){
@@ -26,10 +26,10 @@ class Project{
     return mysqli_query($this->con, $sql);
 }
     public function displayprojectnumber(){
-        $sql = "SELECT COUNT(*) FROM Submissions";
+        $sql = "SELECT COUNT(*) FROM Submissions ";
         $result=mysqli_query($this->con, $sql);
-        $num_rows = mysqli_fetch_row($result);
-        return $num_rows[0];
+        $num_rows = mysqli_fetch_row($result) ;
+        return $num_rows[0]+1;
     }
 
     public function assignprojects($lecturer_id,$description,$department,$year,$semester,$title){
@@ -55,15 +55,8 @@ class Project{
         WHERE s.student_id = '$student_id'";
         return mysqli_query($this->con, $sql);
     }
-    public function displayassignedprojects($search = ""){
-        if($search){
-        $sql = "SELECT * FROM projects
-        WHERE project_title
-        LIKE '%$search%'";
-        }
-        else{
-            $sql = "SELECT * FROM projects";
-        }
+    public function displayassignedprojects(){
+        $sql = "SELECT * FROM projects";
         return mysqli_query($this->con, $sql);
     }
     public function displayassignedprojectsnumber(){

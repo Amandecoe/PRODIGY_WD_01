@@ -1,3 +1,9 @@
+<?php
+$project_id = $_GET['project_id'] ?? '';
+if(empty($project_id)){
+    die("Project ID missing in URL");
+}
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -12,20 +18,16 @@
             &times;
         </a>
         <h2>Upload Project</h2>
-        <form action="../controllers/Projectcontroller.php"method="post" enctype="multipart/form-data">
-            <input type="hidden" name="project_id" value="<?php echo $project['id']; ?>">
-            <label for="title">Project Title</label>
-            <input id="title"type="text" name="project-title" required>
-            <label for="description">Project Description</label>
-            <textarea id="description" name="project-description" rows="4" required></textarea>
-            <label for="file">File</label>
-            <input id="file" type="file" name="project-file" required>
-            <button type="submit"
-                    name="upload"
-                    class="submit-btn">
-                Upload
-            </button>
-        </form>
+        <form action="../controllers/Projectcontroller.php" method="post" enctype="multipart/form-data">
+    <input type="hidden" name="project_id" value="<?php echo $project_id; ?>">
+    <label>Project Title</label>
+    <input type="text" name="project-title" required>
+    <label>Description</label>
+    <textarea name="project-description" required></textarea>
+    <label>File</label>
+    <input type="file" name="project-file" required>
+    <button class="submit-btn" type="submit">Upload</button>
+</form>
     </div>
 </body>
 </html>
